@@ -1,0 +1,115 @@
+html,
+body {
+  max-width: 100%;
+  /* overflow-x: hidden; */
+  padding: 0;
+  margin: 0;
+  /* overflow-x: hidden;/ */
+}
+.payrollCardContainer:hover {
+  color: white;
+}
+
+.payrollCardContainer:hover .payrollCardBackground {
+  width: 100%;
+}
+.HRpayrollButton:hover .HRpayrollPrimaryBackground {
+  width: 0%;
+}
+.HRpayrollButton:hover .HrpayrollSecondaryBackground {
+  width: 100%;
+}
+.rotationAnimation {
+  animation: 5s rotate infinite ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.rightbackground {
+  width: 50%;
+  transition: 0.5s;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(233, 232, 232);
+}
+.leftbackground {
+  width: 50%;
+  transition: 0.5s;
+  height: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(233, 232, 232);
+}
+
+.PayrollCards:hover .rightbackground1 {
+  height: 100%;
+}
+
+.bouncingdiv {
+  position: absolute;
+  bottom: 20px;
+  height: 80px;
+  width: 80px;
+  right: 50px;
+  border-radius: 100%;
+  background: linear-gradient(
+    155deg,
+    rgba(0, 61, 191, 1) 0%,
+    rgba(59, 0, 162, 1) 100%
+  );
+  animation: 2s bounce infinite ease-in-out;
+}
+
+.bouncingimg {
+  animation: 5s bounce infinite ease-in-out;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.customdivider {
+  width: 150px;
+  height: 2px;
+  background-color: rgb(216, 214, 214);
+  margin: 20px 0px;
+  position: relative;
+}
+.customdivider::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  background-color: gray;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hrmcard:hover .backgroundBlob {
+  height: 100%;
+  width: 100%;
+}
+.PayrollCards:hover .featureBackground {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
