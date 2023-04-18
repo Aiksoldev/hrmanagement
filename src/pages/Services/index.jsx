@@ -5,12 +5,15 @@ import React from "react";
 import TopBanner from "@/Components/TopBanner/TopBanner";
 
 import { Fade } from "react-awesome-reveal";
-import ProductBanner from "@/Components/Product/ProductBanner/ProductBanner";
-import ProductFeatures from "@/Components/Product/ProductFeatures/ProductFeatures";
 import HCMBanner from "@/Components/Product/HCMBanner/HCMBanner";
 import Blogs from "@/Components/Product/Blogs/Blogs";
 import NewsLatter from "@/Components/LandingPage/NewsLatter/NewsLatter";
 import ContactUsBanner from "@/Components/LandingPage/ContactusBanner/ContactUsBanner";
+import ProductServices from "@/Components/Services/ProductServices";
+import WhyHRM from "@/Components/Services/WhyHRM";
+import ProductCharactestics from "@/Components/Services/ProductCharactestics";
+import FlexibleHRBanner from "@/Components/Services/FlexibleHRBanner";
+import CompleteHRSystemBanner from "@/Components/Services/CompleteHRSystemBanner";
 
 const useStyle = makeStyles((theme) => {
   return {
@@ -41,34 +44,36 @@ const useStyle = makeStyles((theme) => {
   };
 });
 
-const Product = () => {
+const Services = () => {
   const { container, subContainer, headingContainer, contentContainer } =
     useStyle();
   return (
     <Box>
       <TopBanner
-        title={"Enabling HR Teams to Do More"}
+        title={"Time Efficient & Cost Effective"}
         desc={
-          " Manage your employees effortlessly, Right from Recruitment Till Retirement"
+          "Combination of HR software & consultancy makes managing your people easy, time efficient and cost effective."
         }
-        activePage={"Product"}
+        activePage={"Services"}
       />
       <Box className={container}>
         <Box className={subContainer}>
           <Box className={headingContainer}>
             <Fade direction="up" duration={1500} triggerOnce>
-              <Typography variant="h3">
-                Feature rich Payroll made so simple. You&apos;ll feel in
-                control.
-              </Typography>
+              <Typography variant="h3">New-Age Paperless HCM</Typography>
             </Fade>
             <Box className={"customdivider"}></Box>
+            <Box>
+              <Typography>Team Suite brings you the Best</Typography>
+            </Box>
           </Box>
         </Box>
       </Box>
-      <ProductBanner />
-      <ProductFeatures />
-      <HCMBanner />
+
+      <ProductServices />
+      <WhyHRM />
+      {/* <FlexibleHRBanner />
+      <CompleteHRSystemBanner /> */}
       <Blogs />
       <NewsLatter />
       <ContactUsBanner />
@@ -76,4 +81,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Services;

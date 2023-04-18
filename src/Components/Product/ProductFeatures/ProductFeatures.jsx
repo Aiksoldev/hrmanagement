@@ -23,7 +23,6 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       padding: "40px 10px",
       overflow: "hidden",
-      border: "1px solid red",
     },
     subContainer: {
       width: "100%",
@@ -36,7 +35,6 @@ const useStyle = makeStyles((theme) => {
       [theme.breakpoints.down("md")]: {
         flexWrap: "wrap",
       },
-      border: "1px solid red",
     },
 
     headingContainer: {
@@ -46,17 +44,17 @@ const useStyle = makeStyles((theme) => {
       gap: "20px",
     },
     contentContainer: {
+      width: "100%",
+      height: "100%",
       display: "flex",
-      justifyContent: "space-between",
+      justifyContent: "space-evenly",
       flexWrap: "wrap",
       gap: "20px",
-      width: "100%",
-      border: "1px solid red",
     },
-    card:{
-        width:'100%',
-        maxWidth:'300px',
-    }
+    card: {
+      width: "100%",
+      maxWidth: "300px",
+    },
   };
 });
 

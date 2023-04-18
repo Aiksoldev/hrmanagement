@@ -54,7 +54,11 @@ const useStyle = makeStyles((theme) => {
         display: "none",
       },
     },
-    active: { color: theme.palette.primary.main, fontWeight: "bold" },
+    active: {
+      color: theme.palette.secondary.main,
+      fontWeight: "bold",
+      textDecoration: "underline",
+    },
     linkStyles: {
       color: theme.palette.text.main,
       fontWeight: "bold",
@@ -118,9 +122,9 @@ const Navbar = ({ enable }) => {
     console.log(link);
     const value = state?.map((li) => {
       if (li.link === link) {
-        li.active = true;
+        li.selected = true;
       } else {
-        li.active = false;
+        li.selected = false;
       }
       return li;
     });
