@@ -12,7 +12,7 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       justifyContent: "center",
       gap: "20px",
-      padding: "50px 0px",
+      padding: "20px 0px",
     },
     subContainer: {
       width: "100%",
@@ -71,6 +71,9 @@ const useStyle = makeStyles((theme) => {
       borderRadius: "50px",
       overflow: "hidden",
       position: "relative",
+      "&:hover": {
+        color: theme.palette.white.main,
+      },
     },
     IconContainer: {
       height: "50px",
@@ -130,46 +133,48 @@ const HrPayrollBanner = () => {
     <Box className={container}>
       <Box className={subContainer}>
         <Box className={contentContainer}>
-          <Box sx={{ width: "100%", maxWidth: "450px" }}>
-            <Fade direction="up" duration={1000} triggerOnce >
+          <Box sx={{ width: "100%" }}>
+            <Fade direction="up" duration={1000} triggerOnce>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Cloud HR & Payroll Software with Employee Self Service Portal
+                Boost efficiency and productivity with open source management
+                system, seamlessly integrated with HRM system
               </Typography>
             </Fade>
           </Box>
-          <Box sx={{ width: "100%", maxWidth: "450px" }}>
+          <Box sx={{ width: "100%" }}>
             <Box className={divider}>
               <Box className={innerDivider}></Box>
             </Box>
           </Box>
-          <Box sx={{ width: "100%", maxWidth: "550px" }}>
-            <Fade duration={1500} direction="up" triggerOnce > 
-
-            <Typography>
-              Fast, Accurate, Anywhere. Everything you need in one Package. Team
-              Suite, is a new age Human Capital Management Solution combining
-              strengths of Cloud and Mobility. Team Suite is fully scalable HR
-              Solution and aims to bring a change in the working dynamics of HR
-              department.
-            </Typography>
+          <Box sx={{ width: "100%" }}>
+            <Fade duration={1500} direction="up" triggerOnce>
+              <Typography>
+                Maximize your business potential with our innovative open source
+                management system integrated with our powerful HRM system. Our
+                solution combines the benefits of open source technology and
+                streamlined HRM processes, providing you with the tools you need
+                to manage your business more efficiently. With our comprehensive
+                solution, you&apos;ll have everything you need to take your
+                business to the next level, all in one package.
+              </Typography>
             </Fade>
           </Box>
           <Box>
-            <Fade duration={2000} direction="up" triggerOnce > 
-            <Button className={`${button} HRpayrollButton`}>
-              <Typography color={"inherit"} sx={{ padding: "0px 10px" }}>
-                Learn More
-              </Typography>
-              <Box className={IconContainer}>
-                <ChevronRightIcon color="inherit" />
-              </Box>
-              <Box
-                className={`${buttonBackground} HRpayrollPrimaryBackground`}
-              ></Box>
-              <Box
-                className={`${buttonBackgroundSecondary} HrpayrollSecondaryBackground`}
-              ></Box>
-            </Button>
+            <Fade duration={2000} direction="up" triggerOnce>
+              <Button className={`${button} HRpayrollButton`}>
+                <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
+                  Learn More
+                </Typography>
+                <Box className={IconContainer}>
+                  <ChevronRightIcon color="inherit" />
+                </Box>
+                <Box
+                  className={`${buttonBackground} HRpayrollPrimaryBackground`}
+                ></Box>
+                <Box
+                  className={`${buttonBackgroundSecondary} HrpayrollSecondaryBackground`}
+                ></Box>
+              </Button>
             </Fade>
           </Box>
         </Box>

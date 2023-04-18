@@ -51,6 +51,9 @@ const useStyle = makeStyles((theme) => {
       borderRadius: "50px",
       overflow: "hidden",
       position: "relative",
+      "&:hover": {
+        color: theme.palette.white.main,
+      },
     },
     IconContainer: {
       height: "50px",
@@ -120,26 +123,17 @@ const LeaveManagement = () => {
                 gap: "10px",
               }}
             >
-              <Typography sx={{ fontWeight: "bold" }}>Leave Type</Typography>
               <Typography>
-                Configure leave type, behavior as per the policy
-              </Typography>
-
-              <Typography sx={{ fontWeight: "bold" }}>
-                Leave Approval Workflow
-              </Typography>
-              <Typography>
-                Smartphone app facilitates instant approval or refusal
-              </Typography>
-
-              <Typography sx={{ fontWeight: "bold" }}>Reports</Typography>
-              <Typography>
-                Monitor history, trend graphically with a single click
+                Efficiently manage your leave policies with our customizable
+                leave management solution. Configure leave types and behaviors
+                to align with your policies and easily approve or refuse leave
+                requests. Simplify your leave management and streamline your
+                processes with our comprehensive solution.
               </Typography>
             </Box>
             <Box>
               <Button className={`${button} HRpayrollButton`}>
-                <Typography color={"inherit"} sx={{ padding: "0px 10px" }}>
+                <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
                   Learn More
                 </Typography>
                 <Box className={IconContainer}>

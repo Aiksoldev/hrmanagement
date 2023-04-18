@@ -6,6 +6,7 @@ import HCMCard from "@/Components/Cards/HCMCard";
 import data from "../../../Assets/products/data.png";
 import access from "../../../Assets/products/access.png";
 import rights from "../../../Assets/products/rights.png";
+import { Fade } from "react-awesome-reveal";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -63,6 +64,9 @@ const useStyle = makeStyles((theme) => {
       borderRadius: "50px",
       overflow: "hidden",
       position: "relative",
+      "&:hover": {
+        color: theme.palette.white.main,
+      },
     },
     IconContainer: {
       height: "50px",
@@ -116,57 +120,77 @@ const HCMBanner = () => {
       <Box className={subContainer}>
         <Box className={contentContainer}>
           <Box>
-            <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-              HCM Software |<br /> More power in your hands
-            </Typography>
+            <Fade duration={1000} direction="up" triggerOnce>
+              <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+                HRM Software |<br /> More power in your hands
+              </Typography>
+            </Fade>
           </Box>
           <Box className={"customdivider"}></Box>
           <Box>
-            <Typography>Go paperless with Team Suite</Typography>
+            <Fade duration={1200} direction="up" triggerOnce>
+              <Typography>Go paperless with Team Suite</Typography>
+            </Fade>
           </Box>
           <Box>
-            <Button className={`${button} HRpayrollButton`}>
-              <Typography
-                color={"inherit"}
-                sx={{ padding: "0px 10px", zIndex: "10" }}
-              >
-                Read More
-              </Typography>
-              <Box className={IconContainer}>
-                <ChevronRightIcon color="inherit" />
-              </Box>
-              <Box
-                className={`${buttonBackground} HRpayrollPrimaryBackground`}
-              ></Box>
-              <Box
-                className={`${buttonBackgroundSecondary} HrpayrollSecondaryBackground`}
-              ></Box>
-            </Button>
+            <Fade triggerOnce duration={1500} direction="up">
+              <Button className={`${button} HRpayrollButton`}>
+                <Typography
+                  color={"inherit"}
+                  sx={{ padding: "0px 20px", zIndex: "10" }}
+                >
+                  Read More
+                </Typography>
+                <Box className={IconContainer}>
+                  <ChevronRightIcon color="inherit" />
+                </Box>
+                <Box
+                  className={`${buttonBackground} HRpayrollPrimaryBackground`}
+                ></Box>
+                <Box
+                  className={`${buttonBackgroundSecondary} HrpayrollSecondaryBackground`}
+                ></Box>
+              </Button>
+            </Fade>
           </Box>
         </Box>
         <Box className={imageContainer}>
-          <Box className={singleImageContainer}>
-            <HCMCard
-              data={{
-                img: data,
-                title: "Data Portability",
-              }}
-            />
-          </Box>
-          <Box className={imagesBox}>
-            <HCMCard
-              data={{
-                img: access,
-                title: "Data Portability",
-              }}
-            />
-            <HCMCard
-              data={{
-                img: rights,
-                title: "Data Portability",
-              }}
-            />
-          </Box>
+          <Fade
+            duration={1500}
+            direction="right"
+            triggerOnce
+            style={{ width: "100%" }}
+          >
+            <Box className={singleImageContainer}>
+              <HCMCard
+                data={{
+                  img: data,
+                  title: "Data Portability",
+                }}
+              />
+            </Box>
+          </Fade>
+          <Fade
+            duration={2000}
+            direction="right"
+            triggerOnce
+            style={{ width: "100%" }}
+          >
+            <Box className={imagesBox}>
+              <HCMCard
+                data={{
+                  img: access,
+                  title: "User-Friendly Interface",
+                }}
+              />
+              <HCMCard
+                data={{
+                  img: rights,
+                  title: "Data Portability",
+                }}
+              />
+            </Box>
+          </Fade>
         </Box>
       </Box>
     </Box>

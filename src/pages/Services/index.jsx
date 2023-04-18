@@ -72,8 +72,8 @@ const Services = () => {
 
       <ProductServices />
       <WhyHRM />
-      {/* <FlexibleHRBanner />
-      <CompleteHRSystemBanner /> */}
+      <FlexibleHRBanner />
+      <CompleteHRSystemBanner />
       <Blogs />
       <NewsLatter />
       <ContactUsBanner />

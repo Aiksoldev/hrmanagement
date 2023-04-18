@@ -46,9 +46,9 @@ const Features = () => {
   return (
     <Box>
       <TopBanner
-        title={"Customized Payroll Structures"}
+        title={"Customizable HR Management"}
         desc={
-          "Set your salary structures, payroll cycles and allowance heads based on your organization’s policies and practices."
+          "From streamlining payroll processes to managing time and attendance, we make HR management effortless and efficient"
         }
         activePage={"Features"}
       />
@@ -57,16 +57,17 @@ const Features = () => {
           <Box className={headingContainer}>
             <Fade direction="up" duration={1000} triggerOnce>
               <Typography color={"primary"}>
-                Enterprise Grade Cloud HCM Software
+                Enterprise Grade Cloud HRM Software
               </Typography>
             </Fade>
             <Fade direction="up" duration={1500} triggerOnce>
               <Typography variant="h3">
-                Helping Hundreds of
-                <br /> Businesses Manage their Employees
+                Customizable HR Management with Advanced Features for Your
+                Business
               </Typography>
             </Fade>
             <Box className={"customdivider"}></Box>
+           
           </Box>
           <HRMFeatures />
         </Box>

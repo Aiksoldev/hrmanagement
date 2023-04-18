@@ -134,10 +134,18 @@ const HeroSection = () => {
     <Box className={container}>
       <Box className={subContainer}>
         <Box className={ContentContainer}>
-          <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-            Pakistan&apos;s best rated Payroll Software
-          </Typography>
-          <Typography variant="h6">Simple, Smart & Affordable</Typography>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <Typography color={"primary"}>
+              Efficient, Effective, and Affordable
+            </Typography>
+            <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+              The perfect solution for businesses of all sizes
+            </Typography>
+            <Typography>
+              Revolutionise your HR operations with our powerful and
+              user-friendly software
+            </Typography>
+          </Box>
           <Box className={searchContainer}>
             <InputBase
               fullWidth

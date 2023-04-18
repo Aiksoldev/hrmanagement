@@ -68,9 +68,9 @@ const PayrollSoftwareSection = () => {
       <Box className={container}>
         <Box className={subContainer}>
           <Box className={headingContainer}>
-            <Fade duration={1000} direction="up"  triggerOnce>
+            <Fade duration={1000} direction="up" triggerOnce>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Our Payroll Software
+                Streamline Your HR Processes with Our Solution
               </Typography>
             </Fade>
             <Box>
@@ -79,14 +79,16 @@ const PayrollSoftwareSection = () => {
               </Box>
             </Box>
             <Box>
-              <Fade duration={1500} direction="up"  triggerOnce>
+              <Fade duration={1500} direction="up" triggerOnce>
                 <Typography variant="h5" className={Typo}>
-                  The Ultimate Payroll Solution for Modern Businesses
+                  Take your HR management to the next level with our
+                  comprehensive solution
                 </Typography>
               </Fade>
-              <Fade duration={2000} direction="up"  triggerOnce>
+              <Fade duration={2000} direction="up" triggerOnce>
                 <Typography className={Typo}>
-                  People first is our motto. Employee-centric Cloud HCM Platform
+                  designed for modern businesses. You&apos;ll have the tools you
+                  need to manage your HR functions seamlessly.
                 </Typography>
               </Fade>
             </Box>

@@ -48,15 +48,15 @@ const ExceptionalSupportSection = () => {
   const [cardData] = useState([
     {
       title: "Professional Implementation",
-      desc: "Powerful Team Suite is flexible, multi-language, multi-organization web based and user friendly cross platform intelligent solution. Our smart team implement and provide assistance to quickly deploy the solution and you can always have a dedicated account manager.",
+      desc: "Our HRM software offers a professional implementation service to quickly and seamlessly deploy our flexible, multi-language, multi-organization web-based and user-friendly cross-platform intelligent solution. Our expert team provides assistance for your concerns.",
     },
     {
       title: "Complete Customer Care",
-      desc: "At Team Suite we are committed to ensuring our customers receive market leading support services to make the most out of their solution. Our support team are highly trained, certified and passionate about making our customers happy.",
+      desc: "We prioritize customer care and ensure that our clients receive the best support services to maximize the potential of our solution. Our support team is highly trained, certified, and committed to making our customers happy.",
     },
     {
       title: "Guidance for HR and Payroll",
-      desc: "Our Professional Services team can help organisations to develop and implement Performance Management programs that positively transform employee performance. We can assist clients in designing corporate training strategies, developing training content and implementing development and learning programs.",
+      desc: "Our professional services team can assist organizations in developing and implementing. We offer services in designing corporate training strategies, developing training content, and implementing development and learning programs to improve the skills and knowledge of your employees. ",
     },
   ]);
   return (

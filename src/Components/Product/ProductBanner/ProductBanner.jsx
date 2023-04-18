@@ -62,29 +62,31 @@ const ProductBanner = () => {
                 color={"primary"}
                 sx={{ fontWeight: "bold" }}
               >
-                TeamSuite the easiest and comprehensive Payroll software for
-                Pakistan.
+                HRM software provides a comprehensive HR management solution:
               </Typography>
             </Fade>
           </Box>
           <Box>
             <Fade direction="up" duration={1500} triggerOnce>
               <Typography>
-                Team Suite, HCM Software has everything you need to manage
-                Payroll and HR including attendance, loan, bonus, gratuity,
-                expense, full & final settlement, and statutory & compliance
-                reports.
+                With our software, you can easily manage employee data, such as
+                personal information, job information, and salary information,
+                and generate reports on this data. Our recruitment management
+                module helps streamline the hiring process, from job posting to
+                candidate selection, and our performance management module helps
+                manage employee performance and provide feedback and coaching.
               </Typography>
             </Fade>
           </Box>
           <Box>
             <Fade direction="up" duration={2000} triggerOnce>
               <Typography>
-                Team Suite integrated with all available Fingerprint, Face Based
-                Biometric & RFID Proximity Reader Attendance Machine made simple
-                with seamless automation for employee time & attendance
-                management. Our own integrated application has custom rules to
-                manage attendance devices.
+                Our software also includes a training and development module
+                that allows you to create training plans and manage employee
+                training, and a leave management module that helps track
+                employee leave and calculate leave balances. With our HRM
+                software, you can streamline your HR processes and make better,
+                data-driven decisions about your workforce.
               </Typography>
             </Fade>
           </Box>

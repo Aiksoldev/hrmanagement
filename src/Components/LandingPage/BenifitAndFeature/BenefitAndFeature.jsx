@@ -10,6 +10,9 @@ import f5 from "../../../Assets/feature/f5.png";
 import f6 from "../../../Assets/feature/f6.png";
 import f7 from "../../../Assets/feature/f7.png";
 import f8 from "../../../Assets/feature/f8.png";
+import access from "../../../Assets/feature/access.jpg";
+import com from "../../../Assets/feature/com.png";
+import rep from "../../../Assets/feature/rep.png";
 import FeatureCard from "@/Components/Cards/FeatureCard";
 import { Fade } from "react-awesome-reveal";
 const useStyle = makeStyles((theme) => {
@@ -83,25 +86,66 @@ const BenefitAndFeature = () => {
     {
       img: f1,
       title: "All in one HR Solution",
-      desc: '"Hire to Retire” all in one',
+      desc: "From Payroll to Performance Management, We've Got You Covered",
     },
     {
       img: f2,
-      title: "Access anytime, anywhere",
-      desc: "Mobile Ready, use from any device anywhere",
+      title: "Time and attendance tracking",
+      desc: "Track employee hours and attendance with ease.",
     },
     {
       img: f3,
-      title: "Continuous Product Innovation",
-      desc: "Sign up and leave rest of the modifications on us",
+      title: "Easy employee onboarding",
+      desc: "Add new employees to your database in seconds.",
     },
     {
       img: f4,
-      title: "Sign up and leave rest of the modifications on us",
-      desc: "Customize process approval as per your choice",
+      title: "Employee performance monitoring",
+      desc: "Keep track of employee performance and progress",
     },
     {
       img: f5,
+      title: "Ticket management for query resolution",
+      desc: "Resolve employee queries and issues in a timely manner.",
+    },
+    {
+      img: f6,
+      title: "Streamlined subscription management",
+      desc: "Manage employee subscriptions and benefits effortlessly.",
+    },
+    {
+      img: f7,
+      title: "Task assignment and tracking",
+      desc: "Assign and track employee tasks to stay on top of deadlines.",
+    },
+    {
+      img: f8,
+      title: "Quick access to employee records and history",
+      desc: "Quick access to employee records and history",
+    },
+    {
+      img: com,
+      title: "Roles and communication management",
+      desc: "Define and assign roles for streamlined communication and processing.",
+    },
+    {
+      img: rep,
+      title: "Customizable report generation",
+      desc: "Generate customized reports for deeper insights",
+    },
+    {
+      img: f1,
+      title: "Leave management and time off requests.",
+      desc: "Manage employee leave and time off requests efficiently.",
+    },
+    {
+      img: access,
+      title: "Access anytime, anywhere",
+      desc: "Mobile Ready, use from any device anywhere",
+    },
+
+    {
+      img: f2,
       title: "Cost-effective",
       desc: "Pay as you go, simplified payment methods",
     },
@@ -111,12 +155,12 @@ const BenefitAndFeature = () => {
       desc: "SSL, 2- Factor Authentication and lot more",
     },
     {
-      img: f7,
+      img: f3,
       title: "Instant Notifications",
       desc: "Send / Receive instant notifications",
     },
     {
-      img: f8,
+      img: f7,
       title: "Mobile Ready",
       desc: "Be smart and available all the time.",
     },
@@ -136,15 +180,19 @@ const BenefitAndFeature = () => {
             </Box>
             <Box>
               <Typography variant="h6" className={Typo}>
-                We understand the impact HCM has on your organization’s
-                strategic direction.
+                Automated HR Processes to Save Time and Boost Productivity
               </Typography>
             </Box>
           </Box>
           <Box className={contentContainer}>
             {cardData?.map((data, i) => {
               return (
-                <Fade duration={500*(i+1)} direction="up" key={i}  triggerOnce>
+                <Fade
+                  duration={500 * (i + 1)}
+                  direction="up"
+                  key={i}
+                  triggerOnce
+                >
                   <FeatureCard data={data} />
                 </Fade>
               );

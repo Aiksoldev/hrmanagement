@@ -14,7 +14,6 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       padding: "40px 10px",
       overflow: "hidden",
-      
     },
     subContainer: {
       width: "100%",
@@ -24,7 +23,7 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       justifyContent: "center",
       gap: "20px",
-      
+
       [theme.breakpoints.down("md")]: {
         flexWrap: "wrap",
       },
@@ -35,7 +34,6 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       flexDirection: "column",
       gap: "20px",
-      
     },
     contentContainer: {
       width: "100%",
@@ -44,12 +42,10 @@ const useStyle = makeStyles((theme) => {
       justifyContent: "space-evenly",
       flexWrap: "wrap",
       gap: "20px",
-      
     },
     card: {
       width: "100%",
       maxWidth: "350px",
-      
     },
   };
 });
@@ -79,16 +75,20 @@ const ProductCharactestics = () => {
       <Box className={subContainer}>
         <Box className={headingContainer}>
           <Box>
-            <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-              Time Efficient & Cost Effective
-            </Typography>
+            <Fade direction="up" triggerOnce duration={1000}>
+              <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+                Time Efficient & Cost Effective
+              </Typography>
+            </Fade>
           </Box>
           <Box className={"customdivider"}></Box>
           <Box>
-            <Typography>
-              Combination of HR software & consultancy makes managing your
-              people easy, time efficient and cost effective.
-            </Typography>
+            <Fade duration={1500} triggerOnce direction="up">
+              <Typography>
+                Combination of HR software & consultancy makes managing your
+                people easy, time efficient and cost effective.
+              </Typography>
+            </Fade>
           </Box>
         </Box>
         <Box className={contentContainer}>

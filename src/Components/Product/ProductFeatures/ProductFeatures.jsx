@@ -63,51 +63,53 @@ const ProductFeatures = () => {
     useStyle();
   const [cardData] = useState([
     {
-      icon: <MobileFriendlyIcon sx={{fontSize:'25px',color:'inherit'}}/>,
-      title: "Self Service Mobile App",
+      icon: <MobileFriendlyIcon sx={{ fontSize: "25px", color: "inherit" }} />,
+      title: "Ticket Management",
     },
     {
-      icon: <ContactMailIcon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: <ContactMailIcon sx={{ fontSize: "25px", color: "inherit" }} />,
       title: "Personal Info Management",
     },
     {
-      icon: <AccessTimeIcon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: <AccessTimeIcon sx={{ fontSize: "25px", color: "inherit" }} />,
       title: "Leave / Time Management",
     },
     {
-      icon: <HourglassTopIcon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: <HourglassTopIcon sx={{ fontSize: "25px", color: "inherit" }} />,
       title: "Time, Attendance & Leave",
     },
     {
-      icon: <MonetizationOnIcon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: <MonetizationOnIcon sx={{ fontSize: "25px", color: "inherit" }} />,
       title: "Loan & lease Mangement",
     },
     {
-      icon: <Diversity2Icon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: <Diversity2Icon sx={{ fontSize: "25px", color: "inherit" }} />,
       title: "Performance & Training",
     },
     {
-      icon: <StarIcon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: <StarIcon sx={{ fontSize: "25px", color: "inherit" }} />,
       title: "Benefits and Allowance",
     },
     {
-      icon: <BadgeIcon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: <BadgeIcon sx={{ fontSize: "25px", color: "inherit" }} />,
       title: "Employment Compliance",
     },
     {
-      icon: <DeckIcon sx={{fontSize:'25px',color:'inherit'}}/>,
-      title: "Insurance Benefits",
+      icon: <DeckIcon sx={{ fontSize: "25px", color: "inherit" }} />,
+      title: "Payroll Management",
     },
     {
-      icon: <FindInPageIcon sx={{fontSize:'25px',color:'inherit'}}/>,
-      title: "Document Manager",
+      icon: <FindInPageIcon sx={{ fontSize: "25px", color: "inherit" }} />,
+      title: "Performance Management",
     },
     {
-      icon: <CardTravelIcon sx={{fontSize:'25px',color:'inherit'}}/>,
-      title: "Travel & Expense",
+      icon: <CardTravelIcon sx={{ fontSize: "25px", color: "inherit" }} />,
+      title: "Monthly Report",
     },
     {
-      icon: <AdminPanelSettingsIcon sx={{fontSize:'25px',color:'inherit'}}/>,
+      icon: (
+        <AdminPanelSettingsIcon sx={{ fontSize: "25px", color: "inherit" }} />
+      ),
       title: "User Role & Ride",
     },
   ]);
@@ -125,7 +127,13 @@ const ProductFeatures = () => {
         <Box className={contentContainer}>
           {cardData?.map((data, i) => {
             return (
-              <Fade direction="up" duration={500 * i} className={card} key={i} triggerOnce>
+              <Fade
+                direction="up"
+                duration={500 * i}
+                className={card}
+                key={i}
+                triggerOnce
+              >
                 <ProductFeaturesCard data={data} />
               </Fade>
             );

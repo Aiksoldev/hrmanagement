@@ -58,8 +58,7 @@ const Product = () => {
           <Box className={headingContainer}>
             <Fade direction="up" duration={1500} triggerOnce>
               <Typography variant="h3">
-                Feature rich Payroll made so simple. You&apos;ll feel in
-                control.
+                Feature rich HRM made so simple. You&apos;ll feel in control.
               </Typography>
             </Fade>
             <Box className={"customdivider"}></Box>

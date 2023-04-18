@@ -106,7 +106,7 @@ const PayrollMobileBanner = () => {
     },
     {
       icon: <StarIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
-      title: "HR & Benefits Administration",
+      title: "Reporting and analytics",
     },
     {
       icon: <RequestPageIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
@@ -125,23 +125,22 @@ const PayrollMobileBanner = () => {
             <Image
               src={mobile}
               alt={"mobile"}
-              style={{ width:  "100%" , height: "auto" }}
+              style={{ width: "100%", height: "auto" }}
             />
           </Slide>
         </Box>
         <Box className={contentContainer}>
           <Box sx={{ width: "100%", maxWidth: "600px" }}>
             <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-              An End to End Complete Payroll Solution
+              Experience a seamless and hassle-free payroll process with our
+              end-to-end solution
             </Typography>
           </Box>
           <Box className={divider}>
             <Box className={innerDivider}></Box>
           </Box>
           <Box>
-            <Typography>
-              With detailed processes from ‘Hire to Retire’
-            </Typography>
+            <Typography>Accurate and timely payment processing</Typography>
           </Box>
           <Box className={cardContainer}>
             {cardData?.map((data, i) => {
@@ -150,7 +149,6 @@ const PayrollMobileBanner = () => {
                   duration={500 * (i + 1)}
                   key={i}
                   direction="up"
-                
                   triggerOnce
                   className={cardBox}
                 >

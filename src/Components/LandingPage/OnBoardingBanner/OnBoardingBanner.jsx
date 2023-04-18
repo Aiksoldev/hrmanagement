@@ -26,20 +26,17 @@ const useStyle = makeStyles((theme) => {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: "20px",
+      gap: "40px",
       [theme.breakpoints.down("md")]: {
         flexWrap: "wrap",
       },
     },
     contentContainer: {
-    
       display: "flex",
       flexDirection: "column",
       gap: "40px",
     },
     ImageContainer: {
-     
-
       position: "relative",
     },
     button: {
@@ -51,6 +48,9 @@ const useStyle = makeStyles((theme) => {
       borderRadius: "50px",
       overflow: "hidden",
       position: "relative",
+      "&:hover": {
+        color: theme.palette.white.main,
+      },
     },
     IconContainer: {
       height: "50px",
@@ -113,18 +113,24 @@ const OnBoardingBanner = () => {
           <Box className={contentContainer}>
             <Box>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Hiring & Onboarding
+                Effortlessly Manage Projects
               </Typography>
             </Box>
-            <Box sx={{ width: "100%", maxWidth: "400px" }}>
+            <Box sx={{ width: "100%", maxWidth: "600px" }}>
               <Typography>
-                Integrate hiring portal with your website Customize your
-                recruitment process Handle your recruitment process easily
+                Our customizable project management solution simplifies project
+                tracking and communication. Easily add new projects and assign
+                tasks to team members for streamlined collaboration. Our ticket
+                management system ensures efficient issue resolution, while our
+                subscription management feature allows you to manage project
+                access and billing with ease. Say goodbye to the complexities of
+                project management and enjoy a seamless process that drives
+                success for your business.
               </Typography>
             </Box>
             <Box>
               <Button className={`${button} HRpayrollButton`}>
-                <Typography color={"inherit"} sx={{ padding: "0px 10px" }}>
+                <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
                   Learn More
                 </Typography>
                 <Box className={IconContainer}>

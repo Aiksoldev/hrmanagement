@@ -12,12 +12,20 @@ body {
 
 .payrollCardContainer:hover .payrollCardBackground {
   width: 100%;
+  color: white;
+  z-index: -10;
 }
 .HRpayrollButton:hover .HRpayrollPrimaryBackground {
   width: 0%;
+  z-index: -10;
+  color: white;
+
 }
 .HRpayrollButton:hover .HrpayrollSecondaryBackground {
   width: 100%;
+  z-index: -10;
+  color: white;
+
 }
 .rotationAnimation {
   animation: 5s rotate infinite ease-in-out;
@@ -64,8 +72,8 @@ body {
   border-radius: 100%;
   background: linear-gradient(
     155deg,
-    rgba(0, 61, 191, 1) 0%,
-    rgba(59, 0, 162, 1) 100%
+    #53b7c5 0%,
+    #53b7c9 100%
   );
   animation: 2s bounce infinite ease-in-out;
 }

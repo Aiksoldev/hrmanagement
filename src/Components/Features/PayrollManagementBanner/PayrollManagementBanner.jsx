@@ -15,7 +15,7 @@ const useStyle = makeStyles((theme) => {
       background: `url(https://www.teamsuite.app/images/icons/pattern-9.png)`,
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center left",
-    //   backgroundSize: "auto 100%",
+      //   backgroundSize: "auto 100%",
       color: theme.palette.grey[700],
       [theme.breakpoints.down("sm")]: {
         padding: "10px",
@@ -49,6 +49,9 @@ const useStyle = makeStyles((theme) => {
       borderRadius: "50px",
       overflow: "hidden",
       position: "relative",
+      "&:hover": {
+        color: theme.palette.white.main,
+      },
     },
     IconContainer: {
       height: "50px",
@@ -111,20 +114,21 @@ const PayrollManagementBanner = () => {
           <Box className={contentContainer}>
             <Box>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Payroll Management
+                HRM software
               </Typography>
             </Box>
             <Box sx={{ width: "100%", maxWidth: "400px" }}>
               <Typography>
-                The easy accessibility to the Payroll and employees database
-                makes it a boon for every company. Team suite offers convenience
-                that has no match since the complicated task which required
-                hours can now be done in a blink of an eye
+                Our HRM system provides flexibility for managing and developing
+                the people within the organization to ensure that they are
+                engaged, productive, and motivated. At its core, HRM is about
+                creating a positive workplace culture that promotes growth and
+                success for both the organization and its employees.
               </Typography>
             </Box>
             <Box>
               <Button className={`${button} HRpayrollButton`}>
-                <Typography color={"inherit"} sx={{ padding: "0px 10px" }}>
+                <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
                   Read More
                 </Typography>
                 <Box className={IconContainer}>

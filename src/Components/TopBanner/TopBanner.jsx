@@ -1,5 +1,4 @@
 import React from "react";
-import topbannerbg from "../../Assets/topbannerbg.png";
 import { makeStyles } from "@mui/styles";
 import { Box, Typography } from "@mui/material";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
@@ -13,7 +12,7 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       justifyContent: "center",
       padding: "50px 10px",
-      backgroundImage: "url(/topbannerbg.png)",
+      backgroundImage: "url(/topbannerbg.jpg)",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "top center",

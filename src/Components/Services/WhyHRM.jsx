@@ -9,6 +9,7 @@ import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import CloudSyncIcon from "@mui/icons-material/CloudSync";
 import ProductCharactestics from "./ProductCharactestics";
+import { Fade } from "react-awesome-reveal";
 const useStyle = makeStyles((theme) => {
   return {
     parentBox: {
@@ -55,6 +56,9 @@ const useStyle = makeStyles((theme) => {
     },
     singleImageContainer: {
       width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      gap: "20px",
     },
     imagesBox: {
       width: "100%",
@@ -71,6 +75,9 @@ const useStyle = makeStyles((theme) => {
       borderRadius: "50px",
       overflow: "hidden",
       position: "relative",
+      "&:hover": {
+        color: theme.palette.white.main,
+      },
     },
     IconContainer: {
       height: "50px",
@@ -126,90 +133,116 @@ const WhyHRM = () => {
         <Box className={subContainer}>
           <Box className={contentContainer}>
             <Box>
-              <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Why TeamSuite
-              </Typography>
+              <Fade direction="up" duration={1000} triggerOnce>
+                <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+                  Why TeamSuite
+                </Typography>
+              </Fade>
             </Box>
             <Box className={"customdivider"}></Box>
             <Box>
-              <Typography>Decision to Choose Team Suite is easy</Typography>
+              <Fade direction="up" duration={1200} triggerOnce>
+                <Typography>Decision to Choose Team Suite is easy</Typography>
+              </Fade>
             </Box>
             <Box>
-              <Button className={`${button} HRpayrollButton`}>
-                <Typography
-                  color={"inherit"}
-                  sx={{ padding: "0px 10px", zIndex: "10" }}
-                >
-                  Read More
-                </Typography>
-                <Box className={IconContainer}>
-                  <ChevronRightIcon color="inherit" />
-                </Box>
-                <Box
-                  className={`${buttonBackground} HRpayrollPrimaryBackground`}
-                ></Box>
-                <Box
-                  className={`${buttonBackgroundSecondary} HrpayrollSecondaryBackground`}
-                ></Box>
-              </Button>
+              <Fade direction="up" duration={1500} triggerOnce>
+                <Button className={`${button} HRpayrollButton`}>
+                  <Typography
+                    color={"inherit"}
+                    sx={{ padding: "0px 20px", zIndex: "10" }}
+                  >
+                    Read More
+                  </Typography>
+                  <Box className={IconContainer}>
+                    <ChevronRightIcon color="inherit" />
+                  </Box>
+                  <Box
+                    className={`${buttonBackground} HRpayrollPrimaryBackground`}
+                  ></Box>
+                  <Box
+                    className={`${buttonBackgroundSecondary} HrpayrollSecondaryBackground`}
+                  ></Box>
+                </Button>
+              </Fade>
             </Box>
           </Box>
           <Box className={imageContainer}>
-            <Box className={singleImageContainer}>
-              <WhyHRMCard
-                data={{
-                  icon: (
-                    <IntegrationInstructionsIcon
-                      color="primary"
-                      sx={{ fontSize: "55px" }}
-                    />
-                  ),
-                  title: "Integrated MS Power BI and intelligent dashboards",
-                }}
-              />
-              <WhyHRMCard
-                data={{
-                  icon: (
-                    <RocketLaunchIcon
-                      color="primary"
-                      sx={{ fontSize: "55px" }}
-                    />
-                  ),
-                  title: "Continuous Product Innovation",
-                }}
-              />
-              <WhyHRMCard
-                data={{
-                  icon: (
-                    <SettingsSuggestIcon
-                      color="primary"
-                      sx={{ fontSize: "55px" }}
-                    />
-                  ),
-                  title: "Excellent and Efficient Support Systems",
-                }}
-              />
-            </Box>
-            <Box className={imagesBox}>
-              <WhyHRMCard
-                data={{
-                  icon: (
-                    <ThumbUpAltIcon color="primary" sx={{ fontSize: "55px" }} />
-                  ),
-                  title:
-                    "Proven Implementation Methodology which ensures Project Success",
-                }}
-              />
-              <WhyHRMCard
-                data={{
-                  icon: (
-                    <CloudSyncIcon color="primary" sx={{ fontSize: "55px" }} />
-                  ),
-                  title:
-                    "Leading HR Software as a Service for Cloud and on Premise",
-                }}
-              />
-            </Box>
+            <Fade
+              direction="right"
+              duration={1500}
+              triggerOnce
+              style={{ width: "100%" }}
+            >
+              <Box className={singleImageContainer}>
+                <WhyHRMCard
+                  data={{
+                    icon: (
+                      <IntegrationInstructionsIcon
+                        color="primary"
+                        sx={{ fontSize: "55px" }}
+                      />
+                    ),
+                    title: "Integrated MS Power BI and intelligent dashboards",
+                  }}
+                />
+                <WhyHRMCard
+                  data={{
+                    icon: (
+                      <RocketLaunchIcon
+                        color="primary"
+                        sx={{ fontSize: "55px" }}
+                      />
+                    ),
+                    title: "Continuous Product Innovation",
+                  }}
+                />
+                <WhyHRMCard
+                  data={{
+                    icon: (
+                      <SettingsSuggestIcon
+                        color="primary"
+                        sx={{ fontSize: "55px" }}
+                      />
+                    ),
+                    title: "Excellent and Efficient Support Systems",
+                  }}
+                />
+              </Box>
+            </Fade>
+            <Fade
+              direction="right"
+              duration={2000}
+              triggerOnce
+              style={{ width: "100%" }}
+            >
+              <Box className={imagesBox}>
+                <WhyHRMCard
+                  data={{
+                    icon: (
+                      <ThumbUpAltIcon
+                        color="primary"
+                        sx={{ fontSize: "55px" }}
+                      />
+                    ),
+                    title:
+                      "Proven Implementation Methodology which ensures Project Success",
+                  }}
+                />
+                <WhyHRMCard
+                  data={{
+                    icon: (
+                      <CloudSyncIcon
+                        color="primary"
+                        sx={{ fontSize: "55px" }}
+                      />
+                    ),
+                    title:
+                      "Leading HR Software as a Service for Cloud and on Premise",
+                  }}
+                />
+              </Box>
+            </Fade>
           </Box>
         </Box>
       </Box>

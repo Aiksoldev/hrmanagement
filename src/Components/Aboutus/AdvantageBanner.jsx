@@ -1,10 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useState } from "react";
-import service2 from "../../Assets/services/service2.png";
+import dash from "../../Assets/aboutus/dash.jpg";
+import minidash from "../../Assets/aboutus/minidash.jpg";
 import Image from "next/image";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -13,10 +14,6 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       padding: "40px 10px",
       overflow: "hidden",
-
-      background: "url(./service2.png)",
-      backgroundPosition: "right bottom",
-      backgroundRepeat: "no-repeat",
     },
     subContainer: {
       width: "100%",
@@ -26,14 +23,16 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       justifyContent: "center",
       flexDirection: "row-reverse",
-      gap: "20px",
+      gap: "40px",
 
       [theme.breakpoints.down("md")]: {
         flexWrap: "wrap",
+        gap: "20px",
       },
     },
     imageContainer: {
       width: "100%",
+      position: "relative",
     },
     contentContainer: {
       width: "100%",
@@ -51,52 +50,56 @@ const useStyle = makeStyles((theme) => {
         height: "100%",
       },
     },
-    descContainer: {
-      display: "flex",
-      gap: "10px",
+    miniDash: {
+      height: "120px",
+      width: "200px",
+      position: "absolute",
+      bottom: "60px",
+      right: "-90px",
+      [theme.breakpoints.down("md")]: {
+        display: "none",
+      },
     },
   };
 });
 
-const CompleteHRSystemBanner = () => {
+const AdvantageBanner = () => {
   const {
     container,
     subContainer,
     contentContainer,
     imageContainer,
     image,
-    descContainer,
+    miniDash,
   } = useStyle();
 
   return (
     <Box className={container}>
       <Box className={subContainer}>
         <Box className={imageContainer}>
-          <Image src={service2} alt={""} className={image} />
+          <Slide duration={1200} direction="right" triggerOnce>
+            <Image src={dash} alt={""} className={image} quality={100} />
+          </Slide>
+          <Slide direction="right" duration={1500} triggerOnce>
+            <Image src={minidash} alt="" className={miniDash} quality={100} />
+          </Slide>
         </Box>
         <Box className={contentContainer}>
           <Box>
             <Fade duration={1000} direction="up" triggerOnce>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Team Suite is a complete HR system that only needs a browser
+                The Team Suite Advantage
               </Typography>
             </Fade>
           </Box>
           <Box className={"customdivider"}></Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <Fade triggerOnce duration={1200} direction="up">
+            <Fade direction="up" duration={1500} triggerOnce>
               <Typography>
-                Nothing complicated. No fuss. Just open any browser and enjoy
-                user-friendly, high-performance HR software that lets you make
-                big company impact from anywhere.
-              </Typography>
-            </Fade>
-            <Fade duration={1500} direction="up" triggerOnce>
-              <Typography>
-                Team Suite is a software system used by small and large
-                businesses for better employee management—also called Human
-                Resources Management Systems (HRMS), Human Resources Information
-                Systems (HRIS) or Human Capital Management (HCM) software
+                With 99% retention and hundreds of thousands of happy users, our
+                clients will tell you there is no better choice for a complete
+                Human Capital Management System or Human Resource Information
+                Management System.
               </Typography>
             </Fade>
           </Box>
@@ -106,4 +109,4 @@ const CompleteHRSystemBanner = () => {
   );
 };
 
-export default CompleteHRSystemBanner;
+export default AdvantageBanner;

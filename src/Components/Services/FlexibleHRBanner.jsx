@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import service from "../../Assets/services/service.png";
 import Image from "next/image";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { Fade } from "react-awesome-reveal";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -23,7 +24,7 @@ const useStyle = makeStyles((theme) => {
       maxWidth: "1280px",
       display: "flex",
       justifyItems: "space-evenly",
-      
+
       alignItems: "center",
       justifyContent: "center",
       gap: "20px",
@@ -80,9 +81,11 @@ const FlexibleHRBanner = () => {
         </Box>
         <Box className={contentContainer}>
           <Box>
-            <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-              Flexible, fully customizable HR software
-            </Typography>
+            <Fade duration={1000} direction="up" triggerOnce >
+              <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+                Flexible, fully customizable HR software
+              </Typography>
+            </Fade>
           </Box>
           <Box className={"customdivider"}></Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -90,7 +93,9 @@ const FlexibleHRBanner = () => {
               return (
                 <Box key={i} className={descContainer}>
                   <CheckCircleIcon color="primary" />
-                  <Typography>{desc}</Typography>
+                  <Fade duration={500*(i+1)} direction="up" triggerOnce >
+                    <Typography>{desc}</Typography>
+                  </Fade>
                 </Box>
               );
             })}

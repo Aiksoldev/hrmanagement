@@ -5,6 +5,7 @@ import blog1 from "../../../Assets/blogs/blog1.jpg";
 import blog2 from "../../../Assets/blogs/blog2.jpg";
 import blog3 from "../../../Assets/blogs/blog3.jpg";
 import BlogCard from "@/Components/Cards/BlogCard";
+import { Fade } from "react-awesome-reveal";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -12,7 +13,6 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       justifyContent: "center",
       padding: "40px 10px",
-    
     },
     subContainer: {
       width: "100%",
@@ -22,10 +22,6 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       justifyContent: "center",
       gap: "20px",
-    
-      [theme.breakpoints.down("md")]: {
-        flexWrap: "wrap",
-      },
     },
     headingContainer: {
       display: "flex",
@@ -35,15 +31,23 @@ const useStyle = makeStyles((theme) => {
     cardsContainer: {
       width: "100%",
       display: "flex",
-      flexWrap: "wrap",
+      
       justifyContent: "space-evenly",
-    
+      gap: "20px",
+      [theme.breakpoints.down("lg")]: {
+        flexWrap: "wrap",
+      },
+    },
+    card: {
+      width: "100%",
+      minWidth: "250px",
+      flex: 1,
     },
   };
 });
 
 const Blogs = () => {
-  const { container, subContainer, headingContainer, cardsContainer } =
+  const { container, subContainer, headingContainer, cardsContainer, card } =
     useStyle();
   const [carddata] = useState([
     {
@@ -79,7 +83,17 @@ const Blogs = () => {
         </Box>
         <Box className={cardsContainer}>
           {carddata?.map((data, i) => {
-            return <BlogCard key={i} data={data} />;
+            return (
+              <Fade
+                key={i}
+                direction="up"
+                duration={500 * (i + 1)}
+                triggerOnce
+                className={card}
+              >
+                <BlogCard data={data} />
+              </Fade>
+            );
           })}
         </Box>
       </Box>

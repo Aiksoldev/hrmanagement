@@ -2,10 +2,13 @@ import SoftwareCard from "@/Components/Cards/SoftwareCard";
 import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useState } from "react";
-import TouchAppIcon from "@mui/icons-material/TouchApp";
-import PhonelinkSetupIcon from "@mui/icons-material/PhonelinkSetup";
-import InsertPageBreakIcon from "@mui/icons-material/InsertPageBreak";
-import { Flip } from "react-awesome-reveal";
+import ab1 from "../../Assets/aboutus/ab1.png";
+import ab2 from "../../Assets/aboutus/ab2.png";
+import ab3 from "../../Assets/aboutus/ab3.png";
+import ab4 from "../../Assets/aboutus/ab4.png";
+
+import FeatureCard from "@/Components/Cards/FeatureCard";
+import { Fade } from "react-awesome-reveal";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -13,9 +16,9 @@ const useStyle = makeStyles((theme) => {
       alignItems: "center",
       justifyContent: "center",
       padding: "50px 20px",
-      [theme.breakpoints.down('md')]:{
-        padding:'10px'
-      }
+      [theme.breakpoints.down("md")]: {
+        padding: "10px",
+      },
     },
     subContainer: {
       width: "100%",
@@ -23,7 +26,7 @@ const useStyle = makeStyles((theme) => {
       display: "flex",
       flexDirection: "column",
       gap: "20px",
-      alignItems:'center',
+      alignItems: "center",
     },
     headingContainer: {
       display: "flex",
@@ -38,9 +41,8 @@ const useStyle = makeStyles((theme) => {
       justifyContent: "center",
       gap: "20px",
       padding: "50px 0px",
-      [theme.breakpoints.down("md")]: {
-        flexDirection: "column",
-      },
+      flexWrap: "wrap",
+      justifyContent: "space-evenly",
     },
     divider: {
       width: "150px",
@@ -64,7 +66,7 @@ const useStyle = makeStyles((theme) => {
   };
 });
 
-const Num1PayrollSection = () => {
+const AboutHRMBanner = () => {
   const {
     container,
     subContainer,
@@ -76,19 +78,24 @@ const Num1PayrollSection = () => {
   } = useStyle();
   const [cardData] = useState([
     {
-      icon: <TouchAppIcon color={"primary"} sx={{ fontSize: "55px" }} />,
-      title: "Empower Employees",
-      desc: "Comprehensive employee self service portal",
+      img: ab1,
+      title: "Anytime, Anywhere Access",
+      desc: "Employee self service at your finger tips",
     },
     {
-      icon: <InsertPageBreakIcon color={"primary"} sx={{ fontSize: "55px" }} />,
-      title: "Hassle-free Paperless Solution",
-      desc: "Workflow is there for approve / refuse with delay",
+      img: ab2,
+      title: "Simplify Communication",
+      desc: "Communicate to employees with ease",
     },
     {
-      icon: <PhonelinkSetupIcon color={"primary"} sx={{ fontSize: "55px" }} />,
-      title: "Cost Effective, Customizable",
-      desc: "Affordable HR Management with Customizable Solutions.",
+      img: ab3,
+      title: "Instant Letter Generation",
+      desc: "With one click generate & publish letters",
+    },
+    {
+      img: ab4,
+      title: "Smart Attendance with Geo Mark",
+      desc: "Mark attendance easily with portable device",
     },
   ]);
   return (
@@ -97,35 +104,28 @@ const Num1PayrollSection = () => {
         <Box className={subContainer}>
           <Box className={headingContainer}>
             <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-              Why #1 Solution | HRM Software
+              More Than Just for you
             </Typography>
             <Box>
               <Box className={divider}>
                 <Box className={innerDivider}></Box>
               </Box>
             </Box>
-            <Box>
-              <Typography variant="h6" className={Typo}>
-                Discover Effortless HR Management Today.
-              </Typography>
-            </Box>
+            
           </Box>
           <Box className={contentContainer}>
             {cardData?.map((data, i) => {
               return (
-                <Flip key={i} style={{ width: "100%" }} triggerOnce>
-                  <SoftwareCard data={data} />
-                </Flip>
+                <Fade
+                  duration={500 * (i + 1)}
+                  direction="up"
+                  key={i}
+                  triggerOnce
+                >
+                  <FeatureCard data={data} />
+                </Fade>
               );
             })}
-          </Box>
-          <Box>
-            <Button
-              variant="contained"
-              sx={{ padding: "10px 40px", borderRadius: "20px" }}
-            >
-              Download Brochure
-            </Button>
           </Box>
         </Box>
       </Box>
@@ -133,4 +133,4 @@ const Num1PayrollSection = () => {
   );
 };
 
-export default Num1PayrollSection;
+export default AboutHRMBanner;

@@ -34,13 +34,11 @@ const useStyle = makeStyles((theme) => {
       },
     },
     contentContainer: {
-    
       display: "flex",
       flexDirection: "column",
       gap: "40px",
     },
     ImageContainer: {
-    
       position: "relative",
     },
     button: {
@@ -52,6 +50,9 @@ const useStyle = makeStyles((theme) => {
       borderRadius: "50px",
       overflow: "hidden",
       position: "relative",
+      "&:hover": {
+        color: theme.palette.white.main,
+      },
     },
     IconContainer: {
       height: "50px",
@@ -109,19 +110,21 @@ const TimeAndAttendanceBanner = () => {
           <Box className={contentContainer}>
             <Box>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Time, Attendance
+                Time and Attendance
               </Typography>
             </Box>
             <Box sx={{ width: "100%", maxWidth: "500px" }}>
               <Typography>
-                ntegrate any device of your choice biometric or face
-                recognition. Geo-restricted attendance is another option for
-                your ease. Monitor daily time on your smartphone.
+                Effortlessly manage time and attendance with our customizable
+                solution, featuring geo-restricted attendance options and daily
+                time monitoring on your smartphone. Say goodbye to manual
+                tracking and enjoy a streamlined process that simplifies your
+                workforce management.
               </Typography>
             </Box>
             <Box>
               <Button className={`${button} HRpayrollButton`}>
-                <Typography color={"inherit"} sx={{ padding: "0px 10px" }}>
+                <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
                   Learn More
                 </Typography>
                 <Box className={IconContainer}>

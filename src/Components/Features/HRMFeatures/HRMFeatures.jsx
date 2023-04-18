@@ -18,6 +18,9 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import MobileFriendlyIcon from "@mui/icons-material/MobileFriendly";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
+import BadgeIcon from "@mui/icons-material/Badge";
+import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
+import BeenhereIcon from "@mui/icons-material/Beenhere";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -27,7 +30,7 @@ const useStyle = makeStyles((theme) => {
       flexWrap: "wrap",
       gap: "40px",
       justifyContent: "space-evenly",
-      padding:'20px 20px'
+      padding: "20px 20px",
     },
     Card: {
       width: "100%",
@@ -43,28 +46,28 @@ const HRMFeatures = () => {
       icon: (
         <ImportantDevicesIcon color={"inherit"} sx={{ fontSize: "55px" }} />
       ),
-      title: "Employee Self Service",
-      desc: "ESS delivers a superior user experience by combining web-based and mobile simplicity with powerful and practical features that drive productivity and user satisfaction.",
+      title: "Performance",
+      desc: "Set goals, track progress, and conduct evaluations to ensure that your employees are performing at their best. With our performance management tools, and many more.",
     },
     {
       icon: <MobileFriendlyIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
-      title: "Mobile App",
-      desc: "Increase enagagement, satisfaction and empower your employees with real-time visibility and control of their work life anytime and anywhere with the Android App.",
+      title: "Employee self-service",
+      desc: "Our HRM software offers employee self-service features that enable employees to view and add their own personal information, request time off, and more.",
     },
     {
       icon: <FingerprintIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "Time & Attendance",
-      desc: "Attendance data will be sync with Team Suite and integrated with the payroll will eliminate manual reconciliation. Shifts, Overtime, Outdoor and Branch all included.",
+      desc: "Automating attendance data collection and integration with payroll systems can eliminate the need for manual reconciliation. This includes tracking employee shifts any many more.",
     },
     {
       icon: <ManageAccountsIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "Leave Management",
-      desc: "Team Suite provide workflow based leave application and approval and notification to each stakeholder. Configure your leave type and rules with robust engine.",
+      desc: "A workflow-based leave application and approval system can simplify the leave management process. It can also notify all relevant parties about leave requests.",
     },
     {
       icon: <CreditScoreIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "Loan Management",
-      desc: "Team Suite has flexibility to create Loan types, requests, approval based on workflow and integrated with payroll with zero manual calculation involved in the process",
+      desc: "Efficient loan management can be achieved by using a system that enables the creation of different loan types, streamlines loan requests and approvals through a workflow-based process.",
     },
     {
       icon: (
@@ -81,7 +84,7 @@ const HRMFeatures = () => {
     {
       icon: <RecentActorsIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "Performance (PMS)",
-      desc: "Team Suite is all-in-one HCM system supports you, your executives, managers and employees' performance and development. It connect instantly, making light work of big detail.",
+      desc: "A comprehensive human capital management system should support the performance and development of executives, managers, and employees.",
     },
     {
       icon: <BackpackIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
@@ -91,12 +94,12 @@ const HRMFeatures = () => {
     {
       icon: <AccountTreeIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "Organization Chart",
-      desc: "Team Suite has facility to create multiple / multilevel reporting hierarchy for a company or group of companies. Custom Org. chats can be generated based on parameters.",
+      desc: "Flexible organization chart can help companies create multiple reporting hierarchies and visualize complex structures across a company.",
     },
     {
       icon: <AddchartIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "HR Analytics",
-      desc: "Team Suite inbuilt live performance analytics provide you with a range of business metrics to allow faster and better informed management decisions in a real time fashion",
+      desc: "Our software contains live performance analytics that provide you with a range of business metrics to allow faster and better informed management decisions in a real time fashion",
     },
     {
       icon: <ExitToAppIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
@@ -106,19 +109,37 @@ const HRMFeatures = () => {
     {
       icon: <StorageIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "Employee Database",
-      desc: "Get the complete details about employee statutory information and manage checklist. Get complete view on employee movement right from interview till the final settlement.",
+      desc: "Keep a comprehensive record of employee information, including statutory details and employment history. Manage checklists to ensure compliance with HR policies and regulations.",
     },
     {
       icon: (
         <AccountBalanceWalletIcon color={"inherit"} sx={{ fontSize: "55px" }} />
       ),
       title: "Payroll",
-      desc: "Team Suite has automated rule based payroll management right from creating, tax, advances, lease, deductions and benefits which give a faster payroll output and improve productivity.",
+      desc: "Automate payroll management using rule-based calculations. Manage taxes, advances, leases, deductions, and benefits. Increase productivity and accuracy of payroll processing",
     },
     {
       icon: <AccessTimeIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
       title: "Time Sheet",
       desc: "Calculate & log the time an employee spends at his workstation. Track his productivity and implement improvements, if required.",
+    },
+
+    {
+      icon: <BadgeIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
+      title: "Open Source Integration",
+      desc: "Our HRM software is designed to integrate seamlessly with open source management systems, enabling you to customize and extend the functionality of your HRM.",
+    },
+    {
+      icon: (
+        <SupervisedUserCircleIcon color={"inherit"} sx={{ fontSize: "55px" }} />
+      ),
+      title: "Role Management",
+      desc: "Create and manage roles and permissions for different levels of access and authority. Ensure data security and compliance by controlling access to sensitive information. ",
+    },
+    {
+      icon: <BeenhereIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
+      title: "Project Subscription",
+      desc: "Create and manage project subscriptions for clients. Monitor project progress and performance using real-time data and analytics.",
     },
   ]);
   return (

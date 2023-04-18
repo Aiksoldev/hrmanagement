@@ -7,9 +7,8 @@ import Link from "next/link";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
-      width: "100%",
-      maxWidth: "350px",
-      minHeight: "450px",
+      
+      minHeight: "480px",
       padding: "20px",
       display: "flex",
       flexDirection: "column",
