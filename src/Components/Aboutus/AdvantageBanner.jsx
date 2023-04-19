@@ -88,7 +88,7 @@ const AdvantageBanner = () => {
           <Box>
             <Fade duration={1000} direction="up" triggerOnce>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                The Team Suite Advantage
+                The HRMS Advantage
               </Typography>
             </Fade>
           </Box>
@@ -98,7 +98,7 @@ const AdvantageBanner = () => {
               <Typography>
                 With 99% retention and hundreds of thousands of happy users, our
                 clients will tell you there is no better choice for a complete
-                Human Capital Management System or Human Resource Information
+                Human Resource Management System or Human Resource Information
                 Management System.
               </Typography>
             </Fade>

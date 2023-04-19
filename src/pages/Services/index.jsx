@@ -60,7 +60,7 @@ const Services = () => {
         <Box className={subContainer}>
           <Box className={headingContainer}>
             <Fade direction="up" duration={1500} triggerOnce>
-              <Typography variant="h3">New-Age Paperless HCM</Typography>
+              <Typography variant="h3">New-Age Paperless HRM</Typography>
             </Fade>
             <Box className={"customdivider"}></Box>
             <Box>

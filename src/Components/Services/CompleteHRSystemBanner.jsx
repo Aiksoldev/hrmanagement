@@ -78,7 +78,8 @@ const CompleteHRSystemBanner = () => {
           <Box>
             <Fade duration={1000} direction="up" triggerOnce>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Team Suite is a complete HR system that only needs a browser
+                HRMS is an all-inclusive HR system that simply requires a
+                browser
               </Typography>
             </Fade>
           </Box>
@@ -86,17 +87,22 @@ const CompleteHRSystemBanner = () => {
           <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <Fade triggerOnce duration={1200} direction="up">
               <Typography>
-                Nothing complicated. No fuss. Just open any browser and enjoy
-                user-friendly, high-performance HR software that lets you make
-                big company impact from anywhere.
+                Say goodbye to complicated HR software that requires extensive
+                training and setup. With our user-friendly and high-performance
+                HR software, you can easily manage your employees from anywhere,
+                using any browser. Our software provides a hassle-free
+                experience, so you can focus on what really matters: your
+                people.
               </Typography>
             </Fade>
             <Fade duration={1500} direction="up" triggerOnce>
               <Typography>
-                Team Suite is a software system used by small and large
-                businesses for better employee management—also called Human
-                Resources Management Systems (HRMS), Human Resources Information
-                Systems (HRIS) or Human Capital Management (HCM) software
+                Our HRMS software system provides businesses of all sizes with
+                better employee management tools, whether it&apos;s called a
+                Human Resources Management System (HRMS) or a Human Resources
+                Information System (HRIS). With our software, you can streamline
+                your HR operations and automate repetitive tasks, allowing you
+                to save time and reduce errors.
               </Typography>
             </Fade>
           </Box>

@@ -56,17 +56,17 @@ const ProductCharactestics = () => {
   const [cardData] = useState([
     {
       title: "Customization",
-      desc: "We offer customization services around template design, incorporation of your branding and style and ensuring the end-user experience is as easy and seamless as possible.",
+      desc: "By automating tasks and streamlining workflows, our HR software customization features can help companies save time and reduce labour costs & enable companies to adapt to changing business needs and regulations.",
       icon: <DrawIcon color="primary" sx={{ fontSize: "55px" }} />,
     },
     {
       title: "Training & implementation",
-      desc: "With every deployment we provide hands-on training on-site that is tailored to your organization needs.",
+      desc: "A user-friendly interface, making it easy for employees to navigate and use the software with minimal training and the implementation process is designed to be efficient and effective.",
       icon: <OnDeviceTrainingIcon color="primary" sx={{ fontSize: "55px" }} />,
     },
     {
       title: "Technical Support",
-      desc: "We pride ourselves by providing personal support in your time-zone to assist with any questions you have. Our support team is just a phone call away!",
+      desc: "Provides timely and effective technical support to ensure that companies can quickly resolve any issues that may arise. !",
       icon: <HelpCenterIcon color="primary" sx={{ fontSize: "55px" }} />,
     },
   ]);

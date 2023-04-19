@@ -135,14 +135,14 @@ const WhyHRM = () => {
             <Box>
               <Fade direction="up" duration={1000} triggerOnce>
                 <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                  Why TeamSuite
+                  Why HRMS
                 </Typography>
               </Fade>
             </Box>
             <Box className={"customdivider"}></Box>
             <Box>
               <Fade direction="up" duration={1200} triggerOnce>
-                <Typography>Decision to Choose Team Suite is easy</Typography>
+                <Typography>HRM Software brings you the Best</Typography>
               </Fade>
             </Box>
             <Box>
@@ -183,7 +183,7 @@ const WhyHRM = () => {
                         sx={{ fontSize: "55px" }}
                       />
                     ),
-                    title: "Integrated MS Power BI and intelligent dashboards",
+                    title: "Comprehensive features",
                   }}
                 />
                 <WhyHRMCard
@@ -225,8 +225,7 @@ const WhyHRM = () => {
                         sx={{ fontSize: "55px" }}
                       />
                     ),
-                    title:
-                      "Proven Implementation Methodology which ensures Project Success",
+                    title: "Customization options",
                   }}
                 />
                 <WhyHRMCard
@@ -237,8 +236,7 @@ const WhyHRM = () => {
                         sx={{ fontSize: "55px" }}
                       />
                     ),
-                    title:
-                      "Leading HR Software as a Service for Cloud and on Premise",
+                    title: "Strong support and training options",
                   }}
                 />
               </Box>

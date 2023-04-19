@@ -42,7 +42,7 @@ const FeatureCard = ({ data }) => {
     <Box className={`${container}`}>
       <Box className={subContainer}>
         <Box>
-          <Image src={data?.img} alt={""} style={{height:'120px',width:'120px'}} />
+          <Image src={data?.img} alt={""} quality={100} style={{height:'100px',width:'100px'}} />
         </Box>
         <Box>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>

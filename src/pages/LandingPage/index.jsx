@@ -8,6 +8,7 @@ import Num1PayrollSection from "@/Components/LandingPage/Num1Payroll/Num1Payroll
 import OnBoardingBanner from "@/Components/LandingPage/OnBoardingBanner/OnBoardingBanner";
 import PayrollMobileBanner from "@/Components/LandingPage/PayrollMobileBanner/PayrollMobileBanner";
 import PayrollSoftwareSection from "@/Components/LandingPage/PayrollSoftwareSection/PayrollSoftwareSection";
+import Pricing from "@/Components/LandingPage/Pricing/Pricing";
 import ProductBanner from "@/Components/LandingPage/ProductBanner/ProductBanner";
 import TimeAndAttendanceBanner from "@/Components/LandingPage/TimeAndAttendanceBanner/TimeAndAttendanceBanner";
 import { Box } from "@mui/material";
@@ -35,6 +36,7 @@ const LandingPage = () => {
       <Num1PayrollSection />
       <BenefitAndFeature />
       <FreeAndFastSupport />
+      <Pricing />
       <NewsLatter />
       <ContactUsBanner />
     </Box>

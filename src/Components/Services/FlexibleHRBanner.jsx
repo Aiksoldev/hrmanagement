@@ -69,9 +69,9 @@ const FlexibleHRBanner = () => {
     descContainer,
   } = useStyle();
   const [data] = useState([
-    "One unified cloud platform to recruit, train, and manage people",
-    "Manage your entire work flow in one place with reliable notification tools, build automated process that will save you time and hassle",
-    "From onboarding, document management, reporting, applicant tracking, absence and time management, Make Team Suite work for your specific needs with total flexibility and customization",
+    "A single, integrated cloud-based platform for all your people's needs, from recruitment and training to management.",
+    "Consolidate your work processes and streamline your HR operations with our all-in-one HR software. With our reliable notification tools and automated workflows, you can easily manage your entire workflow in one place, saving you time and hassle.",
+    "Empower your HR operations with our customizable HRMS software, designed to meet your specific needs. With a range of features and modules, including onboarding, document management, reporting, applicant tracking, and absence and time management, our software provides total flexibility and customization.",
   ]);
   return (
     <Box className={container}>

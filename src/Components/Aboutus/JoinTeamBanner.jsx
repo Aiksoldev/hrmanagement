@@ -120,7 +120,7 @@ const JoinTeamBanner = () => {
           <Box>
             <Fade direction="up" duration={1000} triggerOnce>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                Team Suite, Better HR for All
+                HRMS, Better HR for All
               </Typography>
             </Fade>
           </Box>
@@ -128,19 +128,32 @@ const JoinTeamBanner = () => {
           <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
             <Fade direction="up" duration={1200} triggerOnce>
               <Typography>
-                Team Suite offers paperless onboarding that takes care of your
-                entire team, all in one place. To decrease your workload by
-                automating employee Onboarding and separation with smart-fill
-                forms, automated tasks and follow-up approval.
+                At HRMS, we understand that managing your employees can be a
+                time-consuming and challenging task. That&apos;s why we offer
+                paperless onboarding that takes care of your entire team, all in
+                one place. With our software, you can automate employee
+                onboarding and separation, using smart-fill forms, automated
+                tasks, and follow-up approvals. This not only saves you time,
+                but also helps to decrease the risk of errors and ensures
+                compliance with regulations.
               </Typography>
             </Fade>
             <Fade direction="up" duration={1500} triggerOnce>
               <Typography>
-                Our experienced professionals know that your business requires
-                customized human resource solutions that work well for your
-                company and your employees. We help you minimize human capital
-                management risks and challenges, and proactively increase
-                productivity. It’s what we do!
+                Our team of experienced professionals knows that every business
+                has unique HR requirements, which is why we provide customised
+                human resource solutions that work well for your company and
+                your employees.
+              </Typography>
+            </Fade>
+            <Fade direction="up" duration={1500} triggerOnce>
+              <Typography>
+                At HRMS, we take care of the HR management, so you can focus on
+                growing your business. Our software is designed to be
+                easy-to-use and highly intuitive, ensuring that you can get the
+                most out of your HR operations with minimal hassle. Contact us
+                today to learn more about how we can help you manage your
+                workforce and drive your business forward.
               </Typography>
             </Fade>
           </Box>
