@@ -32,13 +32,13 @@ const useStyle = makeStyles((theme) => {
       maxWidth: "550px",
     },
     cardContainer: {
-      width: "100%",
       display: "flex",
-      justifyContent: "space-evenly",
-      gap: "20px",
+      justifyContent: "center",
+      gap: "50px",
       [theme.breakpoints.down("md")]: {
         flexWrap: "wrap",
         justifyContent: "center",
+        gap: "20px",
       },
     },
   };
@@ -155,7 +155,12 @@ const Pricing = () => {
             live in
           </Typography>
         </Box>
-        <Fade direction="up" duration={1200} triggerOnce>
+        <Fade
+          direction="up"
+          duration={1200}
+          triggerOnce
+          style={{ width: "100%" }}
+        >
           <Box className={cardContainer}>
             {cardData?.map((data, i) => {
               return (
