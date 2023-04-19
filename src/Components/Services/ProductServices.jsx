@@ -11,6 +11,7 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+import BusinessIcon from "@mui/icons-material/Business";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -67,8 +68,8 @@ const ProductServices = () => {
       title: "Healthcare",
     },
     {
-      icon: <CommuteIcon sx={{ fontSize: "25px", color: "inherit" }} />,
-      title: "Automobile",
+      icon: <BusinessIcon sx={{ fontSize: "25px", color: "inherit" }} />,
+      title: "IT Company",
     },
     {
       icon: <AccountBalanceIcon sx={{ fontSize: "25px", color: "inherit" }} />,
@@ -96,7 +97,6 @@ const ProductServices = () => {
   return (
     <Box className={container}>
       <Box className={subContainer}>
-       
         <Box className={contentContainer}>
           {cardData?.map((data, i) => {
             return (

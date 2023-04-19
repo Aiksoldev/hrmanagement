@@ -93,8 +93,8 @@ const HRMFeatures = () => {
     },
     {
       icon: <AccountTreeIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
-      title: "Organization Chart",
-      desc: "Flexible organization chart can help companies create multiple reporting hierarchies and visualize complex structures across a company.",
+      title: "Calendar & Notifications",
+      desc: "Calendar & notification modules you updated about ongoing & upcoming events such leave applications, requests, tickets, documents expiry etc.",
     },
     {
       icon: <AddchartIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
@@ -103,8 +103,8 @@ const HRMFeatures = () => {
     },
     {
       icon: <ExitToAppIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
-      title: "Exit Management",
-      desc: "Employees Full & Final settlement can be prepared based on resignation, automatically calculates outstanding Loan balances, Notice pay and Leave Encashment, Gratuity and PF.",
+      title: "Compliance",
+      desc: "HRM facilitates organizations to manage their people data with state of the art technologies. You can save the personal and official details of people, their jobs & designations, etc on a fingertip.",
     },
     {
       icon: <StorageIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
@@ -120,8 +120,8 @@ const HRMFeatures = () => {
     },
     {
       icon: <AccessTimeIcon color={"inherit"} sx={{ fontSize: "55px" }} />,
-      title: "Time Sheet",
-      desc: "Calculate & log the time an employee spends at his workstation. Track his productivity and implement improvements, if required.",
+      title: "Time Office & Leave",
+      desc: "HRM you have freedom to apply any policy for your time office & leave. You can manage single shift, multiple shifts, flexible hours, late policies all together.",
     },
 
     {

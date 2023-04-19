@@ -64,7 +64,7 @@ const Services = () => {
             </Fade>
             <Box className={"customdivider"}></Box>
             <Box>
-              <Typography>Team Suite brings you the Best</Typography>
+              <Typography>HRM Software brings you the Best</Typography>
             </Box>
           </Box>
         </Box>

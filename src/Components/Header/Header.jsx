@@ -1,12 +1,19 @@
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../Assets/logo.png";
 import logoscroll from "../../Assets/logoscroll.png";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import theme from "@/theme/theme";
 import { useRouter } from "next/router";
+import TemporaryDrawer from "../Drawer/Drawer";
+import HomeIcon from "@mui/icons-material/Home";
+import AppsOutageIcon from "@mui/icons-material/AppsOutage";
+import CategoryIcon from "@mui/icons-material/Category";
+import InfoIcon from "@mui/icons-material/Info";
+import ContactsIcon from "@mui/icons-material/Contacts";
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -55,7 +62,7 @@ const useStyle = makeStyles((theme) => {
       },
     },
     active: {
-      color: theme.palette.secondary.main,
+      color: theme.palette.grey[300],
       fontWeight: "bold",
       textDecoration: "underline",
     },
@@ -83,40 +90,60 @@ const Navbar = ({ enable }) => {
     hamburgerIcon,
   } = useStyle();
   const router = useRouter();
+  const [open, setOpen] = useState(false);
   const [state, setstate] = useState([
     {
       title: "Home",
       selected: true,
       link: "/",
+      icons: <HomeIcon color="inherit" />,
     },
     {
       title: "Features",
       selected: false,
       link: "/Features",
+      icons: <AppsOutageIcon color="inherit" />,
     },
     {
       title: "Products",
       selected: false,
       link: "/Products",
+      icons: <CategoryIcon color="inherit" />,
     },
 
     {
       title: "Services",
       selected: false,
       link: "/Services",
+      icons: <SettingsSuggestIcon color="inherit" />,
     },
     {
       title: "About Us",
       selected: false,
       link: "/Aboutus",
+      icons: <InfoIcon color="inherit" />,
     },
     {
       title: "Contact",
       selected: false,
       link: "/Contact",
+      icons: <ContactsIcon color="inherit" />,
     },
   ]);
   console.log(enable);
+
+  useEffect(() => {
+    const value = state?.map((li) => {
+      if (li.link === router?.pathname) {
+        li.selected = true;
+      } else {
+        li.selected = false;
+      }
+      return li;
+    });
+
+    setstate(value);
+  }, [router.pathname]);
 
   const handleNavigate = (link) => {
     console.log(link);
@@ -174,10 +201,12 @@ const Navbar = ({ enable }) => {
                 fontSize: "35px",
                 color: (theme) => theme.palette.white.main,
               }}
+              onClick={() => setOpen(true)}
             />
           </IconButton>
         </Box>
       </Box>
+      <TemporaryDrawer open={open} setOpen={setOpen} navlinks={state} />
     </Box>
   );
 };
