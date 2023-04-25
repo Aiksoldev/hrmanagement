@@ -4,6 +4,7 @@ import React from "react";
 import software2 from "../../../Assets/software2.png";
 import bgdots from "../../../Assets/bgdots.png";
 import Image from "next/image";
+import { useRouter } from "next/router";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -75,7 +76,6 @@ const useStyle = makeStyles((theme) => {
       right: "225px",
       background: theme.palette.background.main,
     },
-    
   };
 });
 
@@ -89,8 +89,8 @@ const BetterHrForAllSection = () => {
     img,
     blob1,
     blob2,
-    
   } = useStyle();
+  const router = useRouter();
   return (
     <Box className={container}>
       <Box className={subContainer}>
@@ -113,6 +113,7 @@ const BetterHrForAllSection = () => {
               <Button
                 variant="contained"
                 sx={{ padding: "15px 30px", borderRadius: "50px" }}
+                onClick={() => router.push("/Demo")}
               >
                 Request A Demo
               </Button>

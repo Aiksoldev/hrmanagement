@@ -4,6 +4,7 @@ import React from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Image from "next/image";
 import { Slide } from "react-awesome-reveal";
+import { useRouter } from "next/router";
 
 const useStyle = makeStyles((theme) => {
   return {
@@ -104,6 +105,7 @@ const LeaveManagement = () => {
     buttonBackgroundSecondary,
     FreeIcons,
   } = useStyle();
+  const router = useRouter()
   return (
     <Box className={container}>
       <Box className={subContainer}>
@@ -132,7 +134,7 @@ const LeaveManagement = () => {
               </Typography>
             </Box>
             <Box>
-              <Button className={`${button} HRpayrollButton`}>
+              <Button className={`${button} HRpayrollButton`} onClick={()=>router.push('/Features')}>
                 <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
                   Learn More
                 </Typography>

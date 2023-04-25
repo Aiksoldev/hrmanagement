@@ -48,65 +48,12 @@ const useStyle = makeStyles((theme) => {
         height: "100%",
       },
     },
-    button: {
-      display: "flex",
-      alignItems: "center",
-      gap: "40px",
-      border: `1px solid ${theme.palette.background.main}`,
-      padding: "0px",
-      borderRadius: "50px",
-      overflow: "hidden",
-      position: "relative",
-      "&:hover": {
-        color: theme.palette.white.main,
-      },
-    },
-    IconContainer: {
-      height: "50px",
-      width: "50px",
-      borderRadius: "100%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      background: theme.palette.background.main,
-      color: theme.palette.white.main,
-    },
-    buttonBackground: {
-      width: "100%",
-      height: "100%",
-      position: "absolute",
-      top: "0px",
-      right: "0px",
-      transition: "0.5s",
-      zIndex: "-1",
-      background: theme.palette.white.main,
-    },
-    buttonBackgroundSecondary: {
-      width: "0%",
-      height: "100%",
-      position: "absolute",
-      top: "0px",
-      left: "0px",
-      transition: "0.5s",
-      zIndex: "-1",
-      background: theme.palette.background.main,
-      color: theme.palette.white.main,
-    },
   };
 });
 
 const JoinTeamBanner = () => {
-  const {
-    container,
-    subContainer,
-    contentContainer,
-    imageContainer,
-    image,
-    button,
-    IconContainer,
-    buttonBackground,
-    buttonBackgroundSecondary,
-  } = useStyle();
+  const { container, subContainer, contentContainer, imageContainer, image } =
+    useStyle();
 
   return (
     <Box className={container}>
@@ -156,25 +103,6 @@ const JoinTeamBanner = () => {
                 workforce and drive your business forward.
               </Typography>
             </Fade>
-          </Box>
-          <Box>
-            <Button className={`${button} HRpayrollButton`}>
-              <Typography
-                color={"inherit"}
-                sx={{ padding: "0px 20px", zIndex: "10", textAlign: "center" }}
-              >
-                Read More
-              </Typography>
-              <Box className={IconContainer}>
-                <ChevronRightIcon color="inherit" />
-              </Box>
-              <Box
-                className={`${buttonBackground} HRpayrollPrimaryBackground`}
-              ></Box>
-              <Box
-                className={`${buttonBackgroundSecondary} HrpayrollSecondaryBackground`}
-              ></Box>
-            </Button>
           </Box>
         </Box>
       </Box>

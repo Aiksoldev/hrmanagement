@@ -10,6 +10,7 @@ import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import CloudSyncIcon from "@mui/icons-material/CloudSync";
 import ProductCharactestics from "./ProductCharactestics";
 import { Fade } from "react-awesome-reveal";
+import { useRouter } from "next/router";
 const useStyle = makeStyles((theme) => {
   return {
     parentBox: {
@@ -127,6 +128,7 @@ const WhyHRM = () => {
     buttonBackground,
     buttonBackgroundSecondary,
   } = useStyle();
+  const router = useRouter();
   return (
     <Box className={parentBox}>
       <Box className={container}>
@@ -147,7 +149,10 @@ const WhyHRM = () => {
             </Box>
             <Box>
               <Fade direction="up" duration={1500} triggerOnce>
-                <Button className={`${button} HRpayrollButton`}>
+                <Button
+                  className={`${button} HRpayrollButton`}
+                  onClick={() => router.push("/Aboutus")}
+                >
                   <Typography
                     color={"inherit"}
                     sx={{ padding: "0px 20px", zIndex: "10" }}

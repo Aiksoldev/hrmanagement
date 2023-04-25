@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  CircularProgress,
   Divider,
   FormControl,
   Paper,
@@ -8,12 +9,15 @@ import {
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
+import React, { useContext, useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import TopBanner from "@/Components/TopBanner/TopBanner";
 import { Fade } from "react-awesome-reveal";
+import { PostContactFormAPI } from "@/APIs/PostContactFormAPI";
+import { SnackbarContext } from "@/Context/SnackbarContext";
+import { useRouter } from "next/router";
 
 const useStyle = makeStyles((theme) => {
   return {
@@ -30,7 +34,7 @@ const useStyle = makeStyles((theme) => {
       display: "flex",
       flexDirection: "column",
       gap: "50px",
-      padding: "40px 0px",
+      padding: "40px 10px",
       alignItems: "center",
       overflow: "hidden",
     },
@@ -114,6 +118,25 @@ const Contact = () => {
     AddressBox,
     mapContainer,
   } = useStyle();
+  const [data, setdata] = useState({});
+  const router = useRouter();
+  const [loading, setloading] = useState(false);
+  const { setsnackbarData } = useContext(SnackbarContext);
+  const handleChange = (e) => {
+    setdata({ ...data, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(data);
+    setloading(true);
+    const response = await PostContactFormAPI(data);
+    setsnackbarData(response?.snackBarData);
+    if (response.data.IsSuccess) {
+      setloading(false);
+      router.push("/");
+    }
+    setloading(false);
+  };
   return (
     <Box>
       <TopBanner
@@ -138,49 +161,80 @@ const Contact = () => {
               triggerOnce
               style={{ width: "100%", height: "100%" }}
             >
-              <Paper elevation={3} className={formContainer}>
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                  <Typography color={"primary"} variant component={"span"}>
-                    Get in
-                  </Typography>{" "}
-                  touch with us!
-                </Typography>
-                <Box>
-                  <Typography>
-                    There are many variations of passages of Lorem Ipsum
-                    available but the majority have suffered alteration in some
-                    form .
+              <Paper elevation={3}>
+                <form className={formContainer} onSubmit={handleSubmit}>
+                  <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                    <Typography color={"primary"} variant component={"span"}>
+                      Get in
+                    </Typography>{" "}
+                    touch with us!
                   </Typography>
-                </Box>
-                <Box sx={{ display: "flex", gap: "20px" }}>
-                  <FormControl fullWidth>
-                    <TextField name="name" placeholder="Name" fullWidth />
-                  </FormControl>
-                  <FormControl fullWidth>
-                    <TextField name="email" placeholder="Email" fullWidth />
-                  </FormControl>
-                </Box>
-                <Box sx={{ display: "flex", gap: "20px" }}>
-                  <FormControl fullWidth>
-                    <TextField name="subject" placeholder="Subject" fullWidth />
-                  </FormControl>
-                </Box>
-                <Box sx={{ display: "flex", gap: "20px" }}>
-                  <FormControl fullWidth>
-                    <TextField
-                      name="message"
-                      placeholder="Message"
-                      multiline
-                      minRows={8}
-                      fullWidth
-                    />
-                  </FormControl>
-                </Box>
-                <Box>
-                  <Button variant="contained" sx={{ padding: "10px 30px" }}>
-                    Send Message
-                  </Button>
-                </Box>
+                  <Box>
+                    <Typography>
+                      There are many variations of passages of Lorem Ipsum
+                      available but the majority have suffered alteration in
+                      some form .
+                    </Typography>
+                  </Box>
+                  <Box sx={{ display: "flex", gap: "20px" }}>
+                    <FormControl fullWidth>
+                      <TextField
+                        name="name"
+                        onChange={handleChange}
+                        placeholder="Name"
+                        fullWidth
+                        required
+                      />
+                    </FormControl>
+                    <FormControl fullWidth>
+                      <TextField
+                        name="email"
+                        onChange={handleChange}
+                        placeholder="Email"
+                        fullWidth
+                        type="email"
+                        required
+                      />
+                    </FormControl>
+                  </Box>
+                  <Box sx={{ display: "flex", gap: "20px" }}>
+                    <FormControl fullWidth>
+                      <TextField
+                        name="subject"
+                        onChange={handleChange}
+                        placeholder="Subject"
+                        fullWidth
+                        required
+                      />
+                    </FormControl>
+                  </Box>
+                  <Box sx={{ display: "flex", gap: "20px" }}>
+                    <FormControl fullWidth>
+                      <TextField
+                        name="message"
+                        onChange={handleChange}
+                        placeholder="Message"
+                        multiline
+                        minRows={8}
+                        fullWidth
+                        required
+                      />
+                    </FormControl>
+                  </Box>
+                  <Box>
+                    {loading ? (
+                      <CircularProgress />
+                    ) : (
+                      <Button
+                        variant="contained"
+                        sx={{ padding: "10px 30px" }}
+                        type="submit"
+                      >
+                        Send Message
+                      </Button>
+                    )}
+                  </Box>
+                </form>
               </Paper>
             </Fade>
             <Fade

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Navbar from "../Header/Header";
 import Footer from "../Footer/Footer";
 
+import SnackBar from "../Snackbar/Snackbar";
+
 export default function Layout({ children }) {
   const [state, setstate] = useState(false);
   useEffect(() => {
@@ -44,11 +46,12 @@ export default function Layout({ children }) {
         >
           <Navbar enable={state} />
         </Box>
-        <Box sx={{overflowX:'hidden'}}>{children}</Box>
+        <Box sx={{ overflowX: "hidden" }}>{children}</Box>
         <Box>
           <Footer />
         </Box>
       </Box>
+      <SnackBar />
     </>
   );
 }

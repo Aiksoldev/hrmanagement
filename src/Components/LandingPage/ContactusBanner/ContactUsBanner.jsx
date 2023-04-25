@@ -2,7 +2,7 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import contact from "../../../Assets/contact.png";
-import logo1 from "../../../Assets/logo1.png";
+import logo1 from "../../../Assets/logo.png";
 import Image from "next/image";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -10,6 +10,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Slide } from "react-awesome-reveal";
+import { useRouter } from "next/router";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -34,7 +35,6 @@ const useStyle = makeStyles((theme) => {
       },
     },
     ContentContainer: {
-     
       display: "flex",
       flexDirection: "column",
       gap: "20px",
@@ -42,7 +42,6 @@ const useStyle = makeStyles((theme) => {
       textAlign: "center",
     },
     imageContainer: {
-    
       display: "flex",
       flexDirection: "column",
       gap: "20px",
@@ -71,10 +70,16 @@ const ContactUsBanner = () => {
     iconsContainer,
     iconButton,
   } = useStyle();
+  const router = useRouter();
   return (
     <Box className={container}>
       <Box className={subContainer}>
-        <Slide direction="left" duration={1500} triggerOnce style={{width:'100%'}}>
+        <Slide
+          direction="left"
+          duration={1500}
+          triggerOnce
+          style={{ width: "100%" }}
+        >
           <Box className={imageContainer}>
             <Box sx={{ width: "100%" }}>
               <Image
@@ -86,14 +91,24 @@ const ContactUsBanner = () => {
             <Button
               variant="contained"
               sx={{ padding: "10px 30px", borderRadius: "50px" }}
+              onClick={() => router.push("/Demo")}
             >
               Request A Demo
             </Button>
           </Box>
         </Slide>
-        <Slide direction="right" duration={2000} triggerOnce style={{width:'100%'}}>
+        <Slide
+          direction="right"
+          duration={2000}
+          triggerOnce
+          style={{ width: "100%" }}
+        >
           <Box className={ContentContainer}>
-            <Image src={logo1} alt="" />
+            <Image
+              src={logo1}
+              alt=""
+              style={{ width: "150px", height: "auto" }}
+            />
             <Box>
               <Typography>© 2023 Team Aiksol. All rights reserved</Typography>
             </Box>

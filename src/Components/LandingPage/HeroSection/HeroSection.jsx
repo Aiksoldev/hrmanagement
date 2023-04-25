@@ -81,17 +81,19 @@ const useStyle = makeStyles((theme) => {
       overflow: "hidden",
       display: "flex",
       gap: "10px",
+      padding: "0px 0px 0px 10px",
       alignItems: "center",
       justifyContent: "space-between",
       border: `1px solid ${theme.palette.background.main}`,
       [theme.breakpoints.down("md")]: {
         flexWrap: "wrap",
         borderRadius: "0px",
+        padding:0
       },
     },
     button: {
       width: "50%",
-      padding: "10px 20px",
+      padding: "15px 20px",
       background: theme.palette.background.main,
       whiteSpace: "nowrap",
       color: theme.palette.white.main,
@@ -130,6 +132,10 @@ const HeroSection = () => {
     "https://www.teamsuite.app/images/resource/user-1.png",
     "https://www.teamsuite.app/images/resource/user-4.png",
   ]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("hello");
+  };
   return (
     <Box className={container}>
       <Box className={subContainer}>
@@ -146,14 +152,18 @@ const HeroSection = () => {
               user-friendly software
             </Typography>
           </Box>
-          <Box className={searchContainer}>
+
+          <form className={searchContainer} onSubmit={handleSubmit}>
             <InputBase
               fullWidth
-              sx={{ padding: "5px 10px", height: "100%" }}
-              placeholder="Request A Demo"
+              sx={{ padding: "10px", height: "100%" }}
+              placeholder="Enter your business email"
+              required
             />
-            <Button className={button}>Request A Demo</Button>
-          </Box>
+            <Button className={button} type="submit">
+              Request A Demo
+            </Button>
+          </form>
         </Box>
         <Box className={imageContainer}>
           <Image

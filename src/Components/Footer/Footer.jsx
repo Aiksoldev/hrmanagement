@@ -1,7 +1,8 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { useRouter } from "next/router";
 import React from "react";
-
+import * as Scroll from "react-scroll";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -42,31 +43,66 @@ const useStyle = makeStyles((theme) => {
 
 const Footer = () => {
   const { container, subContainer, divider, Typo } = useStyle();
+  const ScrollLink = Scroll.Link;
+  const router = useRouter();
+  const handleNavigate = (link) => {
+    router.push(link);
+  };
   return (
     <Box className={container}>
       <Box className={subContainer}>
         <Box>
-          <Typography variant="" className={Typo}>Blogs</Typography>
+          <ScrollLink
+            to="blogs"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
+          >
+            <Typography variant="" className={Typo}>
+              Blogs
+            </Typography>
+          </ScrollLink>
         </Box>
         <Divider orientation="vertical" className={divider} />
         <Box>
-          {" "}
-          <Typography variant="" className={Typo}>Careers</Typography>
+          <Typography
+            variant=""
+            className={Typo}
+            onClick={() => handleNavigate("/Careers")}
+          >
+            Careers
+          </Typography>
         </Box>
         <Divider orientation="vertical" className={divider} />
         <Box>
-          {" "}
-          <Typography variant="" className={Typo}>Download Brochure</Typography>
+          <Typography
+            variant=""
+            className={Typo}
+            onClick={() => handleNavigate("/Download Brochure")}
+          >
+            Download Brochure
+          </Typography>
         </Box>
         <Divider orientation="vertical" className={divider} />
         <Box>
-          {" "}
-          <Typography variant="" className={Typo}>Become a Partner</Typography>
+          <Typography
+            variant=""
+            className={Typo}
+            onClick={() => handleNavigate("/Become_a_Partner")}
+          >
+            Become a Partner
+          </Typography>
         </Box>
         <Divider orientation="vertical" className={divider} />
         <Box>
-          {" "}
-          <Typography variant="" className={Typo}>Privacy Policy</Typography>
+          <Typography
+            variant=""
+            className={Typo}
+            onClick={() => handleNavigate("/Privacy_Policy")}
+          >
+            Privacy Policy
+          </Typography>
         </Box>
       </Box>
     </Box>

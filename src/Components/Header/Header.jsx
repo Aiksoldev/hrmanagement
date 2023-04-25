@@ -163,8 +163,17 @@ const Navbar = ({ enable }) => {
   return (
     <Box className={container}>
       <Box className={subContainer}>
-        <Box>
-          <Image src={!enable ? logo : logoscroll} alt="logo" />
+        <Box
+          onClick={() => {
+            router.push("/");
+          }}
+          sx={{ cursor: "pointer" }}
+        >
+          <Image
+            src={!enable ? logo : logo}
+            alt="logo"
+            style={{ width: "150px", height: "auto" }}
+          />
         </Box>
         <Box className={linkContainer}>
           {state.map((link, i) => {
@@ -189,7 +198,14 @@ const Navbar = ({ enable }) => {
         </Box>
         {!enable ? (
           <Box>
-            <Button className={button}>Request A Demo</Button>
+            <Button
+              className={button}
+              onClick={() => {
+                router.push("./Demo");
+              }}
+            >
+              Request A Demo
+            </Button>
           </Box>
         ) : null}
 

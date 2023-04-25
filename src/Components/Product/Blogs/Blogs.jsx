@@ -31,7 +31,7 @@ const useStyle = makeStyles((theme) => {
     cardsContainer: {
       width: "100%",
       display: "flex",
-      
+
       justifyContent: "space-evenly",
       gap: "20px",
       [theme.breakpoints.down("lg")]: {
@@ -73,7 +73,7 @@ const Blogs = () => {
     },
   ]);
   return (
-    <Box className={container}>
+    <Box className={container} id={"blogs"}>
       <Box className={subContainer}>
         <Box className={headingContainer}>
           <Typography variant="h3" sx={{ fontWeight: "bold" }}>

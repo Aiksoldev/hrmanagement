@@ -4,7 +4,8 @@ import React from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Image from "next/image";
 import { Slide } from "react-awesome-reveal";
-import payroll from '../../../Assets/payroll.png'
+import payroll from "../../../Assets/payroll.png";
+import { useRouter } from "next/router";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -102,6 +103,7 @@ const PayrollManagementBanner = () => {
     buttonBackgroundSecondary,
     FreeIcons,
   } = useStyle();
+  const router = useRouter();
   return (
     <Box className={container}>
       <Box className={subContainer}>
@@ -127,7 +129,10 @@ const PayrollManagementBanner = () => {
               </Typography>
             </Box>
             <Box>
-              <Button className={`${button} HRpayrollButton`}>
+              <Button
+                className={`${button} HRpayrollButton`}
+                onClick={() => router.push("/Services")}
+              >
                 <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
                   Read More
                 </Typography>

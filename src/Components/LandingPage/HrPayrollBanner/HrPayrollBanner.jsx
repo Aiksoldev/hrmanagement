@@ -5,6 +5,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import hrpayroll from "../../../Assets/hrpayroll.jpg";
 import Image from "next/image";
 import { Fade, Slide } from "react-awesome-reveal";
+import { useRouter } from "next/router";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -129,6 +130,7 @@ const HrPayrollBanner = () => {
     buttonBackgroundSecondary,
     image,
   } = useStyle();
+  const router = useRouter();
   return (
     <Box className={container}>
       <Box className={subContainer}>
@@ -161,7 +163,10 @@ const HrPayrollBanner = () => {
           </Box>
           <Box>
             <Fade duration={2000} direction="up" triggerOnce>
-              <Button className={`${button} HRpayrollButton`}>
+              <Button
+                className={`${button} HRpayrollButton`}
+                onClick={() => router.push("/Products")}
+              >
                 <Typography color={"inherit"} sx={{ padding: "0px 20px" }}>
                   Learn More
                 </Typography>

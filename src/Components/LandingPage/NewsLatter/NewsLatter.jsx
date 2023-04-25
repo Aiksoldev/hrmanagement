@@ -98,12 +98,15 @@ const NewsLatter = () => {
     image,
     button,
   } = useStyle();
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("hello");
+  };
   return (
     <Box className={container}>
       <Box className={subContainer}>
         <Box className={contentContainer}>
-          <Box className={contentBox}>
+          <form className={contentBox} onSubmit={handleSubmit}>
             <Box>
               <Fade direction="up" duration={1000} triggerOnce>
                 <Typography variant="h3" sx={{ fontWeight: "bold" }}>
@@ -138,15 +141,17 @@ const NewsLatter = () => {
                     width: "100%",
                   }}
                   placeholder="Enter Your Business Email"
+                  type="email"
+                  required
                 />
               </FormControl>
             </Box>
             <Box>
-              <Button variant="contained" className={button}>
+              <Button variant="contained" type="submit" className={button}>
                 Subscribe Now
               </Button>
             </Box>
-          </Box>
+          </form>
           <Box className={imageContainer}>
             <Slide direction="right" duration={1500} triggerOnce>
               <Image

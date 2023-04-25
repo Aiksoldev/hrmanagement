@@ -2,12 +2,11 @@ import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import HCMCard from "@/Components/Cards/HCMCard";
-import data from "../../../Assets/products/data.png";
-import access from "../../../Assets/products/access.png";
-import rights from "../../../Assets/products/rights.png";
+import DemoBannerCard from "@/Components/Cards/DemoBannerCard";
+import data from "../../Assets/products/data.png";
+import access from "../../Assets/products/access.png";
+import rights from "../../Assets/products/rights.png";
 import { Fade } from "react-awesome-reveal";
-import { useRouter } from "next/router";
 const useStyle = makeStyles((theme) => {
   return {
     container: {
@@ -103,7 +102,7 @@ const useStyle = makeStyles((theme) => {
   };
 });
 
-const HCMBanner = () => {
+const DemoBanner = () => {
   const {
     container,
     subContainer,
@@ -116,7 +115,6 @@ const HCMBanner = () => {
     buttonBackground,
     buttonBackgroundSecondary,
   } = useStyle();
-  const router = useRouter();
   return (
     <Box className={container}>
       <Box className={subContainer}>
@@ -124,27 +122,24 @@ const HCMBanner = () => {
           <Box>
             <Fade duration={1000} direction="up" triggerOnce>
               <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                HRM Software |<br /> More power in your hands
+                The Right Features
               </Typography>
             </Fade>
           </Box>
           <Box className={"customdivider"}></Box>
           <Box>
             <Fade duration={1200} direction="up" triggerOnce>
-              <Typography>Go paperless with HRMS</Typography>
+              <Typography>Experience the Difference.</Typography>
             </Fade>
           </Box>
           <Box>
             <Fade triggerOnce duration={1500} direction="up">
-              <Button
-                className={`${button} HRpayrollButton`}
-                onClick={() => router.push("/Demo")}
-              >
+              <Button className={`${button} HRpayrollButton`}>
                 <Typography
                   color={"inherit"}
                   sx={{ padding: "0px 20px", zIndex: "10" }}
                 >
-                  Request a demo
+                  Read More
                 </Typography>
                 <Box className={IconContainer}>
                   <ChevronRightIcon color="inherit" />
@@ -167,10 +162,16 @@ const HCMBanner = () => {
             style={{ width: "100%" }}
           >
             <Box className={singleImageContainer}>
-              <HCMCard
+              <DemoBannerCard
                 data={{
-                  img: data,
-                  title: "Data Portability",
+                  desc: "A completely transformed, Team Suite supports you, your executives, managers and employees' individualized user experience that is immersive, engaging, and intuitive.",
+                  title: "User Experience",
+                }}
+              />
+              <DemoBannerCard
+                data={{
+                  desc: "HRMS, a complete HR all-in-one solution is available whereever your employees are. We let you change colors, images, settings and theme matches your organization the best.",
+                  title: "Mobile Ready",
                 }}
               />
             </Box>
@@ -182,16 +183,16 @@ const HCMBanner = () => {
             style={{ width: "100%" }}
           >
             <Box className={imagesBox}>
-              <HCMCard
+              <DemoBannerCard
                 data={{
-                  img: access,
-                  title: "User-Friendly Interface",
+                  desc: "Your employees determine your success, It's time to unlock their full potential. Our HR software facilitates to effectively process critical payroll, recruitment time & absence.",
+                  title: "Engagement",
                 }}
               />
-              <HCMCard
+              <DemoBannerCard
                 data={{
-                  img: rights,
-                  title: "Data Portability",
+                  desc: "Customizable, parameterized reports available for Analytics that’s Fast and can be exported to excel, PDF, etc. Get now and Unlock the Power of Employee Data with HR Dashboards & Reporting.",
+                  title: "Detailed Reports",
                 }}
               />
             </Box>
@@ -202,4 +203,4 @@ const HCMBanner = () => {
   );
 };
 
-export default HCMBanner;
+export default DemoBanner;
