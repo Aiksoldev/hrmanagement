@@ -5,11 +5,11 @@ let theme = createTheme({
   breakpoints: {
     keys: ["xs", "sm", "md", "lg", "xl"],
     values: {
-      xs: 300,
-      sm: 650,
-      md: 950,
-      lg: 1200,
-      xl: 1300,
+      xs: 480,
+      sm: 720,
+      md: 1020,
+      lg: 1280,
+      xl: 1440,
     },
     unit: "px",
   },
@@ -21,24 +21,25 @@ let theme = createTheme({
       grey: "#333333",
     },
     primary: {
-      main: "#53b7c5 !important ",
+      main: "#579dd5 !important ",
       contrastText: "#fff",
       opacity: "RGBA(52,128,250,0.15)",
     },
     secondary: {
-      main: "#f4f7fa !important",
+      main: "#36adcc !important",
       contrastText: "#fff",
     },
     background: {
-      main: "#53b7c5 !important",
+      main: "#3b3b3b !important",
       contrastText: "#fff",
       secondary: "#fafafa",
       iconContainer: "#f5f5f5",
       icons: "#e0e0e0",
       footer: "#141313",
+      grey: "#e9e9e9",
     },
     BackgroundGradient: {
-      main: "linear-gradient(to bottom, #ffffff , #A5C2F7 )",
+      main: "linear-gradient(90deg,#8cbe4d,#35b1ce 77%)",
     },
     white: {
       main: "#FFFFFF !important",
@@ -68,7 +69,7 @@ let theme = createTheme({
     },
     text: {
       primary: "#1a1a1a",
-      secondary: "rgba(0, 0, 0, 0.6)",
+      secondary: "#8cc640",
       white: "rgb(255,255,255)",
       greyed: "#6C727F",
       disabled: "rgba(0, 0, 0, 0.38)",
@@ -106,7 +107,8 @@ let theme = createTheme({
     },
     h1: {
       fontStyle: "normal",
-      fontWeight: 400,
+      fontWeight: 900,
+
       fontSize: "75px",
       color: "#1a1a1a",
     },
@@ -116,6 +118,7 @@ let theme = createTheme({
       fontSize: "3.75rem",
       lineHeight: 1.2,
       letterSpacing: "-0.00833em",
+      color: "#1a1a1a",
     },
     h3: {
       fontFamily: "Roboto !important",
@@ -167,7 +170,7 @@ let theme = createTheme({
       fontFamily: "Roboto !important",
       fontWeight: 400,
       fontSize: "1rem",
-      color: "#6C727F",
+      color: "#333346",
       lineHeight: 1.7,
       letterSpacing: "0.00938em",
     },
